@@ -2,6 +2,7 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
 
 /**
@@ -22,7 +23,30 @@ class AuthorsController extends AppController
         $this->layout = 'admin';
         $authors = $this->Authors->find('all',['order'=>'author_name asc']);
 
+        $authorTable = TableRegistry::get('Authors');
+        $author = $authorTable->find()
+            ->all();
+        $itemauthors = TableRegistry::get('ItemAuthors');
+
+
+        foreach ($author as $search)
+        {
+            $itemauthor = $itemauthors->find()
+                ->where(['author_id'=>$search->id])
+                ->toArray();
+            if(!$itemauthor)
+            {
+                $deletable = true;
+            }
+            else{
+                $deletable = false;
+            }
+            $this->set('deletable',$deletable);
+        }
+
         $this->set('authors', $authors);
+        $this->set('itemauthors',$itemauthors);
+        $this->set('author', $author);
         $this->set('_serialize', ['authors']);
     }
 

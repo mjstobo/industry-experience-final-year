@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => false,
+    'debug' => true,
 
     /**
      * Configure basic information about the application.
@@ -270,6 +270,8 @@ return [
      * Configures logging options
      */
     'Log' => [
+
+
         'debug' => [
             'className' => 'Cake\Log\Engine\FileLog',
             'path' => LOGS,
