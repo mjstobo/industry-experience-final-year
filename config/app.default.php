@@ -178,7 +178,7 @@ return [
      * easier. Each profile accepts a number of keys. See `Cake\Network\Email\Email`
      * for more information.
      */
-    'EmailTransport' => [
+   /* 'EmailTransport' => [
         'default' => [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
@@ -200,6 +200,7 @@ return [
             //'headerCharset' => 'utf-8',
         ],
     ],
+   */
 
     /**
      * Connection information used by the ORM to connect
