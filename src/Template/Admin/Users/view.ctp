@@ -78,6 +78,10 @@
                                         <br>
                                         <ul class="list-unstyled user_data">
                                             <li>
+                                                <h4><b>Member ID:</b> <?= h($user->id) ?></h4>
+                                            </li>
+                                            <br>
+                                            <li>
                                             <b>Address: </b><br>
                                             <?= h($user->street_address) ?>,  <?= h($user->suburb) ?><br>
                                             <?= h($user->state->state_name) ?> <?= h($user->postcode) ?><br>
