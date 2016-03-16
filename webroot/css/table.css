@@ -1,0 +1,318 @@
+table {
+    border-collapse:collapse;
+    margin-bottom:15px;
+    width:auto;
+    border: none;
+    text-align: left;
+}
+
+caption {
+    text-align:left;
+    font-size:15px;
+    padding-bottom:10px;
+}
+
+table td,
+table th {
+    padding:5px;
+    border: none;
+    border-width:1px;
+}
+
+thead th {
+    background:transparent;
+}
+
+thead th[colspan],
+thead th[rowspan] {
+    background:transparent;
+}
+
+tbody th,
+tfoot th {
+    text-align:left;
+    background:transparent;
+}
+
+tbody td,
+tfoot td {
+    text-align:left;
+    background: transparent;
+}
+
+tfoot th {
+    background:transparent;
+}
+
+tfoot td {
+    background:transparent;
+    font-weight:bold;
+}
+
+tbody tr.odd td {
+    background:transparent;
+}
+
+#headers h1{
+    font-size: 21pt;
+    display: inline-block;
+    color: black;
+}
+
+#headers h2{
+    font-size: 16pt;
+    display: inline-block;
+    color: black;
+}
+
+#headers h3{
+    display: inline;
+    font-size: 10pt;
+    color: black;
+    font-weight: 700;
+}
+
+#headers h4{
+    display: inline;
+    font-size: 10pt;
+    color: black;
+    font-weight: 200;
+}
+
+#headers h6{
+    font-weight: 200;
+    font-size: 10pt;
+}
+
+.title{
+    padding-top: 20px;
+    width: 850px;
+    vertical-align: top;
+}
+
+.alignTop{
+    vertical-align: top;
+}
+
+.imageWidth{
+    width: 180px;
+}
+
+.authorText a{
+    font-size: 14pt;
+}
+
+/** Buttons **/
+.loanbtn{
+    font-family: Arial, sans-serif;
+    background:#ff8400;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(#ff8400,0),color-stop(#ff6600,1));
+    background:-webkit-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:-moz-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:-o-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff6600',GradientType=0 );
+    padding-left:15px;
+    padding-right:57px;
+    height:38px;
+    display:inline-block;
+    position:relative;
+    border:1px solid #ff5a00;
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    float:left;
+    clear:both;
+    margin:10px 0px;
+    overflow:hidden;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+
+.loanbtn-text{
+    padding-top:10px;
+    display:block;
+    font-size:16px;
+    white-space:nowrap;
+    text-shadow:0px 1px 1px rgba(255,255,255,0.3);
+    color:#6e1d08;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+
+.loanbtn-image{
+    position:absolute;
+    right:-5px;
+    top:2px;
+    height:100%;
+    width:52px;
+    border-left:1px solid #ff5a00;
+    -webkit-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    -moz-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+}
+
+.loanbtn-image span{
+    width:35px;
+    height:35px;
+    opacity:0.7;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-20px 0px 0px -20px;
+    background:transparent url(../webroot/css/img/cart.png) no-repeat 75% 55%;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+
+.rsvbtn{
+    font-family: Arial, sans-serif;
+    background:#ff8400;
+    background:-webkit-gradient(linear,left top,left bottom,color-stop(#ff8400,0),color-stop(#ff6600,1));
+    background:-webkit-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:-moz-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:-o-linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    background:linear-gradient(top, #ff8400 0%, #ff6600 100%);
+    filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8400', endColorstr='#ff6600',GradientType=0 );
+    padding-left:15px;
+    padding-right:79px;
+    height:38px;
+    display:inline-block;
+    position:relative;
+    border:1px solid #ff5a00;
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2), 0px 0px 0px 4px rgba(188,188,188,0.5);
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    float:left;
+    clear:both;
+    margin:10px 0px;
+    overflow:hidden;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+
+.rsvbtn-text{
+    padding-top:10px;
+    display:block;
+    font-size:16px;
+    white-space:nowrap;
+    text-shadow:0px 1px 1px rgba(255,255,255,0.3);
+    color:#6e1d08;
+    -webkit-transition:all 0.2s linear;
+    -moz-transition:all 0.2s linear;
+    -o-transition:all 0.2s linear;
+    transition:all 0.2s linear;
+}
+
+.rsvbtn-image{
+    position:absolute;
+    right:-5px;
+    top:2px;
+    height:100%;
+    width:52px;
+    border-left:1px solid #ff5a00;
+    -webkit-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    -moz-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+}
+
+.rsvbtn-image span{
+    width:50px;
+    height:50px;
+    opacity:0.7;
+    position:absolute;
+    left:10px;
+    top:11px;
+    margin:-20px 0px 0px -20px;
+    background:transparent url(../webroot/css/img/tick.png) no-repeat 75% 55%;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+
+.editButton a
+{
+    background: #5054da url(img/overlay.png) repeat-x;
+    padding: 4px 6px 4px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+
+    font-size:14px;
+    margin:3px;
+    position:static;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.addButton a
+{
+    background: #4abf16 url(img/overlay.png) repeat-x;
+    padding: 3px 5px 3px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size:16px;
+    margin:5px;
+    position:static;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.inline{
+    display: inline;
+}
+
+.inline2{
+    display: inline;
+    float:left;
+}
+
+.buttonFloat{
+    float: right;
+}
+
+.floatLeft{
+    float: left;
+}
+
+.floatRight{
+    float:right;
+}

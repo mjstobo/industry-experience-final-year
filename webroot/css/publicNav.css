@@ -1,0 +1,84 @@
+.moduletable_leftmenu{
+    width: 170px;
+}
+.moduletable_leftmenu ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+.moduletable_leftmenu li {
+}
+.moduletable_leftmenu a, .moduletable_leftmenu .separator {
+    color: #e9cffe;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    text-decoration: none;
+    text-align: left;
+    width: 195px;
+    height:36px;
+    padding:0px 15px 0px 30px;
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_bg.png);
+    display:table-cell;
+    vertical-align:middle;
+    *display:block;
+}
+.moduletable_leftmenu li.active a{
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_active.png);
+}
+.moduletable_leftmenu a:hover {
+    text-decoration: underline;
+    color:#e9cffe;
+}
+
+.moduletable_leftmenu li ul{
+    width:170px;
+    background:#f4edfd;
+}
+
+.moduletable_leftmenu li ul li{
+}
+.moduletable_leftmenu li ul li a, .moduletable_leftmenu li ul li .separator,.moduletable_leftmenu li.active ul li a, .moduletable_leftmenu li.active ul li .separator{
+    font-weight:bold;
+    font-size:12px;
+    color:#4c4c4c;
+    width: 170px;
+    padding:0px 20px 0px 45px;
+    text-align:left;
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 10px;
+    *background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 0px;
+}
+.moduletable_leftmenu li ul li.active a{
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_active.png);
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 10px;
+    *background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 0px;
+}
+.moduletable_leftmenu li ul li a:hover{
+    text-decoration: underline;
+}
+
+.moduletable_leftmenu li ul li ul{
+    width:170px;
+    background:#f4edfd;
+}
+
+.moduletable_leftmenu li ul li ul li{
+}
+.moduletable_leftmenu li ul li ul li a, .moduletable_leftmenu li ul li ul li .separator, .moduletable_leftmenu li.active ul li ul li a, .moduletable_leftmenu li.active ul li ul li .separator{
+    font-weight:bold;
+    font-size:11px;
+    color:#5f5f5f;
+    width: 165px;
+    height:26px;
+    padding:0px 15px 0px 60px;
+    text-align:left;
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 6px;
+    *background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 0px;
+}
+.moduletable_leftmenu li ul li ul li a:hover{
+    text-decoration: underline;
+}
+.moduletable_leftmenu li ul li ul li.active a{
+    color:#462268;
+    background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 6px;
+    *background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 0px;
+}

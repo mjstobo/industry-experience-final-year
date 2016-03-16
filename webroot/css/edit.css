@@ -1,0 +1,305 @@
+
+/*
+form {
+    background:#fff;
+    padding:1em;
+    border:1px solid #eee;
+}
+
+fieldset div {
+    margin:0.3em 0;
+    clear:both;
+}*/
+
+h1{
+    font-size: 27px;
+}
+
+form.edit label {
+    float:left;
+    width:10em;
+    text-align:right;
+    margin-right:1em;
+}
+
+form.edit legend {
+    color: #69c121;
+    font-size:1.2em;
+}
+form.edit legend span {
+    width:10em;
+    text-align:right;
+}
+form.edit input {
+    padding:0.05em;
+    border:1px solid #ddd;
+    background:#fafafa;
+}
+form.edit select.optContType
+{
+    width: 180px;
+}
+
+form.edit select.optState
+{
+    width: 180px;
+}
+
+form.edit select.optMemb
+{
+    width: 180px;
+}
+
+form.edit select.optCount
+{
+    width: 180px;
+}
+
+
+form.edit input:hover, input:focus {
+    border-color:#c5c5c5;
+    background:#f6f6f6;
+}
+form.edit fieldset {
+    border:1px solid #ddd;
+    padding:0 0.5em 0.5em;
+}
+
+.radio, .date {
+    position:relative;
+}
+.radio fieldset, .date fieldset {
+    border:none;
+    width:auto;
+    padding:1px 0 0 11em;
+}
+.radio legend, .date legend {
+    font-size:1em;
+    color:#000;
+}
+.radio legend span, .date legend span {
+    position:absolute;
+    left:0;
+    top:0.3em;
+    width:10em;
+    display:block;
+}
+.radio label, .radio input {
+    vertical-align:middle;
+    display:inline;
+    float:none;
+    width:auto;
+    background:none;
+    border:none;
+}
+.radio div {
+    float:left;
+    white-space:nowrap;
+    clear:none;
+}
+
+form.edit input.default {
+    color:#bbb;
+}
+
+
+
+form.edit fieldset.col1
+{
+    border-top:1px solid #F1F1F1;
+    border-right:1px solid #F1F1F1;
+    height:320px;
+    width:320px;
+    padding:5px;
+    float:left;
+}
+
+form.edit fieldset.col2
+{
+    border-top:1px solid #F1F1F1;
+    border-left: hidden;
+    padding:5px;
+    height:195px;
+    margin-bottom:15px;
+    width:330px;
+    float:right;
+}
+
+form.edit fieldset.col3
+{
+    border-top:1px solid #F1F1F1;
+    border-left: hidden;
+    padding:5px;
+    height:98px;
+    margin-bottom:15px;
+    width:330px;
+    float:right;
+}
+
+form.edit fieldset.col4
+{
+    border-top:1px solid #F1F1F1;
+    border-right:1px solid #F1F1F1;
+    padding:5px;
+    float:left;
+    clear:both;
+    width:680px;
+}
+
+fieldset.col1 label{
+    color: #000;
+}
+
+.loanButton a
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:12px;
+    margin:10px;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.holdButton a
+{
+    background: #ff8400 url(img/overlay.png) repeat-x;
+    padding: 8px 13px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size:12px;
+    margin:10px;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.buttonSmall
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size:12px;
+    font-weight: 700;
+    margin:10px;
+    width: 100px;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.button
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:18px;
+    margin:10px;
+}
+
+.delete
+{
+    background: #da151b url(img/overlay.png) repeat-x;
+    padding: 6px 8px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:right;
+    font-size:16px;
+    margin:5px;
+    position:static;
+}
+
+.viewName{
+    float:left;
+    position:static;
+}
+
+fieldset.col1 p{
+     color:#000;
+     display:inline-block;
+ }
+
+fieldset.col1 h6{
+    display:inline-block;
+}
+
+fieldset.col2 p{
+    color:#000;
+    display:inline-block;
+}
+
+fieldset.col2 h6{
+    display:inline-block;
+}
+
+fieldset.col3 p{
+    color:#000;
+    display:inline-block;
+}
+
+fieldset.col3 h6{
+    display:inline-block;
+}
+
+fieldset.col4 p{
+    color:#000;
+    display:inline-block;
+}
+
+fieldset.col4 h6{
+    display:inline-block;
+}
+
+.error-message {
+    font-style: italic;
+    color: red;
+    display: block;
+}
+
+.error-message li {
+    font-style: italic;
+    color: red;
+    display: block;
+}

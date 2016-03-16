@@ -1,0 +1,1 @@
+<h2>Confirming Payment..</h2>

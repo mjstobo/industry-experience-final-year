@@ -1,0 +1,14 @@
+Member Account:
+
+Username: member@test.com
+Password: test
+
+Staff:
+
+Username: newstaff@test.com
+Password: test
+
+PayPal
+
+Email: edv@edvtest.com
+Password: testtest

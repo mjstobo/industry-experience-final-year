@@ -1,0 +1,32 @@
+diff a/logs/debug.log b/logs/debug.log	(rejected hunks)
+@@ -0,0 +1,30 @@
++2015-04-13 06:32:36 Notice: Notice (8): Undefined variable: title_for_layout in [/Applications/MAMP/htdocs/ieapp/src/Template/Layout/bootstrap.ctp, line 5]
++Trace:
++Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
++include - APP/Template/Layout/bootstrap.ctp, line 5
++Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
++Cake\View\View::_render() - CORE/src/View/View.php, line 775
++Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
++Cake\View\View::render() - CORE/src/View/View.php, line 471
++Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 575
++Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
++Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
++[main] - ROOT/webroot/index.php, line 37
++
++
++
++2015-04-13 06:32:40 Notice: Notice (8): Undefined variable: title_for_layout in [/Applications/MAMP/htdocs/ieapp/src/Template/Layout/bootstrap.ctp, line 5]
++Trace:
++Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 138
++include - APP/Template/Layout/bootstrap.ctp, line 5
++Cake\View\View::_evaluate() - CORE/src/View/View.php, line 815
++Cake\View\View::_render() - CORE/src/View/View.php, line 775
++Cake\View\View::renderLayout() - CORE/src/View/View.php, line 509
++Cake\View\View::render() - CORE/src/View/View.php, line 471
++Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 575
++Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
++Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
++[main] - ROOT/webroot/index.php, line 37
++
++
++

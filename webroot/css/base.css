@@ -1,0 +1,1847 @@
+.mobileOnly{display:none;}
+/* CSS Document */
+* {
+	margin:0;
+	padding:0;
+}
+body {
+    background:#92c937 url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/bg.jpg) center 150px no-repeat;
+	font: 12px Arial, Helvetica, sans-serif;
+}
+body.contentpane{
+	background:#ffffff;
+}
+#header {
+	background: #ffffff;
+	height:150px;
+	width: 100%;
+}
+#header_wrapper{
+	width:945px;
+	height:160px;
+	margin:0 auto;
+	padding:15px 0px 0 15px;
+}
+#header .logo{
+	display:block;
+	width:150px;
+	height:120px;
+	float:left;
+}
+#top_right{
+	float:right;
+}
+#search{
+	width:190px;
+	height:31px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/search_bg.png);
+	float:right;
+}
+#search form.search label{
+	display:none;
+}
+#search form input#mod_search_searchword{
+	width:150px;
+	height:31px;
+	line-height:29px;
+	border:none;
+	background:none;
+	margin-left:10px;
+	font-size:12px;
+	color:#45ac33;
+	
+}
+a img{
+	border:none;
+}
+#wrapper {
+	width: 930px;
+	margin:0px auto 20px auto;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/body_wrapper_bg.png) repeat-y;
+	padding:15px;
+}
+#bottom{
+	height: 50px;
+	width: 100%;
+}
+#bottom_wrapper{
+	width:895px;
+	height: 21px;
+	padding: 15px 40px 15px 25px;
+	margin:0 auto;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_newsletter_bg.png) no-repeat;	
+}
+#footer{
+	/*clear: both;*/
+	background:#ffffff;
+	/*background: url(../images/footer_bg.png) center 0;*/
+	width: 100%;	
+}
+#footer_wrapper{
+	width:930px;
+	padding:30px 15px;
+	margin:0 auto;
+	/*background: url(../images/footer_wrapper_bg.png);*/	
+}
+
+#content {
+	background:#ffffff;
+	padding-bottom:30px;
+}
+
+#right, #main, #left {	
+	float: left;
+}
+.one_column #main{
+	width:900px;
+	padding:0px 15px;
+}
+.one_column #left, .one_column #right{
+	display:none;
+}
+.two_column_r #right{
+	width:197px;
+}
+.two_column_r #main{
+	width:590px;
+	margin-right:10px;
+}
+/**content panel size*/
+.two_column_l #left{
+	width:141px;
+	padding: 42px 34px 0px 10px;
+}
+.two_column_l #main{
+	width:710px;
+	padding-right:30px;
+	padding-top:10px;
+}
+.two_column_l #right, .two_column_r #left{
+	display:none;
+}
+.three_column #main{
+	width:383px;
+	margin-right:10px;
+}
+.three_column #right{
+	width:197px;
+}
+.three_column #left{
+	width:197px;
+	margin-right:10px;
+}
+
+/** style rules for overwriting the default column widths on the home page **/
+.home.one_column #wrapper{
+	padding-bottom:0px;
+}
+.home.one_column #content{
+	background:none;
+	padding-bottom:0px;
+}
+.home.one_column #main{
+	padding:0px;
+	width: 930px;
+}
+.home.two_column_r #right{
+}
+.home.two_column_r #main{
+}
+.home.two_column_l #left{
+}
+.home.two_column_l #main{
+}
+.home.three_column #main{
+}
+.home.three_column #right{
+}
+.home.three_column #left{
+}
+
+.separator{
+	clear:both;
+}
+/************************************Top Slide*********************************/
+#LoginSearch { 
+	position: absolute;
+	top: -255px; 
+	width: 100%; 
+	height:260px; 
+	background-image: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topslide_bg.jpg); 
+	background-repeat: repeat-x;
+	z-index:11;
+}
+
+#LoginSearchTab {
+	position: absolute; 
+	top:257px; 
+	right:350px; 
+	width: 250px; 
+	height: 35px; 
+	padding-top:0px; 
+	background-image: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topslide_btn.png); 
+	background-repeat:no-repeat; 
+	text-align:center;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size:12px;
+	color:#000000;
+	font-weight:normal;
+	text-decoration:none;
+}
+
+
+#LoginSearchWrap { 
+	width: 960px;
+	height:260px;
+	margin: 0 auto; 
+	position:relative;
+}
+
+#LoginSearchBody { clear: both; overflow: hidden;}
+
+#LoginSearchBody label { color: #FFFFFF;}
+
+#LoginSearchBody #mod_login_username, #LoginSearchBody #mod_login_password{
+	width:325px;
+	height:40px;
+	margin-right:50px;
+	line-height:40px;
+	font-size:20px;
+	color:#ffffff;
+	background: none;
+	border:none;
+}
+
+.GoSubmit, .button_Search {width: 30px; height: 20px; margin: 0 0 0 5px; color: #FFFFFF; font-size: 10px; background-color: transparent; border: 0; }
+/************************************Breadcrumbs*******************************/
+.moduletable_breadcrumb{
+	margin-bottom:30px;
+}
+.moduletable_breadcrumb a, .moduletable_breadcrumb span{
+	font-size:11px;
+	color:#565656;
+	text-decoration:none;
+}
+.moduletable_breadcrumb a:hover{
+	text-decoration:underline;
+}
+/************************************Top Menu*********************************/
+
+#top_menu {
+	width: 615px;
+	height: 31px;
+}
+#top_menu ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+#top_menu li {
+	display: inline;
+	float: left;
+	margin:0px 3px;
+}
+#top_menu a, #top_menu .separator {
+	line-height: 31px;
+	height:31px;
+	color: #592a75;
+	font-size: 12px;
+	font-weight: bold;	
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding:0px 5px;
+
+}
+#top_menu li.active{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topmenuitem_left.jpg) left top no-repeat;
+}
+#top_menu .active a, #top_menu .active.separator{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topmenuitem_right.jpg) right top no-repeat;
+}
+#top_menu li:hover{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topmenuitem_left.jpg) left top no-repeat;
+}
+#top_menu a:hover {
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/topmenuitem_right.jpg) right top no-repeat;
+}
+#top_menu ul.menu li.item-618{
+	margin-left:0px;
+	background:none;
+}
+#top_menu ul.menu li.item-618 a{
+	padding-left:0px;
+	width:20px;
+	height:31px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_btn.png) no-repeat;
+	text-indent: -9999px;
+}
+/************************************Home Quicklinks*********************************/
+
+#home_quicklinks {
+	width: 277px;
+	height: 269px;
+	padding-top:55px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_quicklinks_bg.jpg);
+	float:left;
+}
+#home_quicklinks ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+#home_quicklinks li {
+	display: inline;
+}
+#home_quicklinks li.last.parent span{
+	display:none;
+}
+#home_quicklinks li.last.parent ul span{
+	display:inherit;
+}
+#home_quicklinks a, #home_quicklinks .separator {
+	line-height: 45px;
+	height:45px;
+	color: #d7ff8e;
+	font-size: 14px;
+	font-weight: bold;	
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	padding-left: 45px;
+	width:232px;
+	margin:0px 0 0 0;
+}
+#home_quicklinks a:hover {
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_quicklinks_hover.png);
+}
+/**************************************Home Tabs**************************************/
+.jwts_tabbertab  {
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_tabs_bg.png) repeat-y;
+}
+.tab_container{
+	background-color:#ffffff;
+	padding:0 15px;
+}
+
+.home-tabs .nav-tabs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	height: 38px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_tabs_nav_bg.png);
+	line-height: normal;
+	border-left: 1px solid #65b94c;
+}
+.home-tabs .nav-tabs li {
+	width: 105px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	list-style-image: none;
+	background: none;
+	display: inline;
+}
+.home-tabs .nav-tabs li a {
+	height: 36px;
+	width: 105px;
+	background: url(../../../templates/eatingdisorders/images/home_tabs_tab.png);
+	display: block;
+	float: left;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #ffffff;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 2px solid #ffffff;
+	text-align: center;
+	line-height: 36px;
+	text-decoration: none;
+}
+.home-tabs .nav-tabs li.active {
+	background: none;
+	padding: 0px;
+	margin: 0px;
+}
+.home-tabs .nav-tabs li.active a {
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 11px;
+	color: #268d18;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_tabs_tab_active.png);
+	border-bottom: 2px solid #e2ffab;
+}
+.home-tabs .tab-pane { display: none; }
+.home-tabs .tab-pane.active { display: block; }
+.home-tabs .tab-content {
+	position: relative;
+	margin: 0px;
+	padding: 14px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_tabs_bg.png) repeat-y;
+}
+.home-tabs .tab-content:after {
+	position: absolute;
+	content: '';
+	bottom: 0;
+	left: 0;
+	height: 14px;
+	width: 545px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/home_tabs_bottom.png);
+	line-height: 0;
+}
+.home-tabs .tab-content ul {
+	background-color: #ffffff;
+	padding: 0 15px;
+	margin: 0;
+	list-style: none;
+}
+.home-tabs .tab-content li {
+	min-height: 95px;
+	border-top: 1px #787878 dotted;
+	padding-bottom: 20px;
+	padding-top: 15px;
+	padding-left: 0px;
+	margin: 0;
+}
+.home-tabs .tab-content li:first-child {
+	border-top: 0;
+}
+.home-tabs .mod-articles-category-title  {
+	font-size: 16px;
+	font-weight: bold;
+	color: #5bae3f;
+	text-decoration: none;
+	width: 300px;
+	margin-bottom: 10px;
+	display: block;
+}
+.home-tabs .mod-articles-category-introtext {
+	font-size: 12px;
+	font-weight: normal;
+	color: #787878;
+	width: 300px;
+}
+.home-tabs .thumb-image {
+	padding: 4px;
+	border: 1px solid #f8c122;
+	background: #f1f1f1;
+	margin-right: 4px;
+	margin-top: -1px;
+	width: 140px;
+	height: 95px;
+	float: right;
+	text-align: center;
+	overflow: hidden;
+}
+.home-tabs .thumb-image img {
+	max-width: 100%;
+}
+
+/**************************************Table settings**************************************/
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: rgba(233, 255, 200, 0.71);
+}
+
+.table tbody tr:hover td, .table tbody tr:hover th {
+    background-color: #f1f1ed;
+    cursor: pointer;
+}
+
+.table th{
+    text-align: left;
+    padding: 0px;
+}
+
+/**************************************Navigation**************************************/
+
+#navigation {
+	height: 48px;
+	width: 100%;
+	position:relative;
+	margin-bottom: 20px;
+	z-index:101;	
+}
+#navigation_wrapper{
+	width: 960px;
+	height: 48px;
+	font-size: 14px;
+	font-weight: bold;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_bg.png);
+	margin:0 auto;	
+}
+
+#navigation_login{
+	width: 960px;
+	height: 48px;
+	font-size: 15px;
+	font-weight: bold;
+  color: #ffffff;
+	background:url(images/button.png) no-repeat;
+	margin:0 auto;
+  	
+}
+
+#navigation ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+#navigation li {
+	display: inline;
+	position: relative;
+	float: left;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_line.png) no-repeat;
+}
+#navigation li.first{
+	padding-left:0;
+	background:none;
+}
+#navigation li.first a:hover{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_first_hover.png);
+}
+#navigation li.first.active a{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_first_hover.png);
+}
+
+#navigation li >  a{
+	width:137px;
+	padding:0;
+}
+
+#navigation li.last a:hover{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_last_hover.png);
+	background-position:right;
+}
+#navigation li.last.active a{
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_last_hover.png);
+}
+#navigation a, #navigation .separator {
+	line-height: 48px;
+	color: #FFFFFF;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	padding:0px 18px 0px 19px;
+	font-size:14px;
+}
+#navigation a:hover {
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_hover.png) repeat-x;
+}
+#navigation .active a {
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/navigation_hover.png) repeat-x;
+}
+
+#navigation li ul li a, #navigation li ul li .separator, #navigation li ul li.first a, #navigation li ul li.first .separator, #navigation li ul li.last .separator, #navigation li ul li.last a, #navigation li.first ul li a, #navigation li.first ul li .separator, #navigation li.last ul li a, #navigation li.last ul li .separator, #navigation li.active ul li a, #navigation li.active ul li .separator, #navigation li.active.first ul li a, #navigation li.active.last ul li a{
+	font-weight:normal;
+	font-size:13px;
+	line-height:25px;
+	width: 276px;
+	padding:0px 12px;
+	text-align:left;
+	background:none;
+}
+#navigation li ul li a:hover, #navigation li.first ul li a:hover, #navigation li.last ul li a:hover, #navigation li ul li.first a:hover, #navigation li ul li.last a:hover, #navigation li ul li.first a:hover, #navigation li ul li.last a:hover{
+	background: none;
+	background-color:#5e3482;
+}
+
+#navigation li ul{
+	position:absolute;
+	left:-99999px;
+	width:300px;
+	background:#957aad;
+	padding: 5px 0px;
+}
+
+#navigation li ul li{
+	display:block;
+	float:none;
+	padding-left:0px;
+	background:none;	
+}
+
+#navigation li:hover > ul {
+	left: 0;
+}
+/**************************************Internal Left Menu**************************************/
+.moduletable_leftmenu{
+	width: 240px;
+}
+.moduletable_leftmenu ul {
+	list-style: none;
+	margin:0px;
+	padding:0px;
+}
+.moduletable_leftmenu li {
+}
+.moduletable_leftmenu a, .moduletable_leftmenu .separator {
+	color: #e9cffe;
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	text-decoration: none;
+	text-align: left;
+	width: 195px;
+	height:36px;
+	padding:0px 15px 0px 30px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_bg.png);
+	display:table-cell;
+	vertical-align:middle;
+	*display:block;
+}
+.moduletable_leftmenu li.active a{
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_active.png);
+}
+.moduletable_leftmenu a:hover {
+	text-decoration: underline;
+	color:#e9cffe;
+}
+
+.moduletable_leftmenu li ul{
+	width:240px;
+	background:#f4edfd;
+}
+
+.moduletable_leftmenu li ul li{
+}
+.moduletable_leftmenu li ul li a, .moduletable_leftmenu li ul li .separator,.moduletable_leftmenu li.active ul li a, .moduletable_leftmenu li.active ul li .separator{
+	font-weight:bold;
+	font-size:12px;
+	color:#4c4c4c;
+	width: 175px;
+	padding:0px 20px 0px 45px;
+	text-align:left;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 10px;
+	*background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 0px;	
+}
+.moduletable_leftmenu li ul li.active a{
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_active.png);
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 10px;
+	*background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_submenu_arrow.png) no-repeat 30px 0px;	
+}
+.moduletable_leftmenu li ul li a:hover{
+	text-decoration: underline;
+}
+
+.moduletable_leftmenu li ul li ul{
+	width:240px;
+	background:#f4edfd;
+}
+
+.moduletable_leftmenu li ul li ul li{
+}
+.moduletable_leftmenu li ul li ul li a, .moduletable_leftmenu li ul li ul li .separator, .moduletable_leftmenu li.active ul li ul li a, .moduletable_leftmenu li.active ul li ul li .separator{
+	font-weight:bold;
+	font-size:11px;
+	color:#5f5f5f;
+	width: 165px;
+	height:26px;
+	padding:0px 15px 0px 60px;
+	text-align:left;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 6px;
+	*background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 0px;
+}
+.moduletable_leftmenu li ul li ul li a:hover{
+	text-decoration: underline;
+}
+.moduletable_leftmenu li ul li ul li.active a{
+	color:#462268;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 6px;
+	*background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/leftmenu_subsubmenu_arrow.png) no-repeat 45px 0px;	
+}
+
+/**************************************left Quicklinks**************************************/
+
+.moduletable_quicklinks {
+	width: 241px;
+	margin-bottom:10px;	
+}
+.moduletable_quicklinks ul {
+	padding:1px;
+	list-style: none;
+	margin:0px;
+	background-color: #268d18;
+}
+.moduletable_quicklinks li {
+	display: inline;
+	width:239px;
+}
+.moduletable_quicklinks a, .moduletable_quicklinks .separator {
+	width:214px;
+	height:36px;
+	line-height: 36px;
+	padding-left: 25px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/left_quicklinks_bg.png);
+	font-size:12px;
+	font-weight:bold;
+	color: #d7ff8e;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	cursor:pointer;
+	cursor:hand;
+}
+.moduletable_quicklinks li.parent .separator{
+	height:43px;
+	line-height:43px;
+	width: 229px;
+	font-size:18px;
+	font-weight:normal;
+	color:#ffffff;
+	text-align:left;
+	padding-left:10px;
+	background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/left_quicklinks_first.png);
+}
+.moduletable_quicklinks a:hover {
+}
+.moduletable_quicklinks li ul li a:hover, .moduletable_quicklinks li ul li.first a:hover, .moduletable_quicklinks li ul li.last a:hover{
+	background: none;
+}
+
+.moduletable_quicklinks li ul{
+	padding:0px;
+	position:relative;
+	width:239px;
+	display: none;
+}
+
+.moduletable_quicklinks li ul li{
+	display:block;
+	float:none;
+	padding-left:0px;
+	background:none;	
+}
+
+/**********************************Footer***************************************/
+#footer_left{
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/footer_right_bg.png) no-repeat;
+	width: 190px;
+	padding:50px 10px 0 10px;
+	margin-right:30px;
+	float:left;
+}
+#footer_middle{
+	width: 190px;
+	padding:0px 10px;
+	margin-right:40px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/footer_middle_bg.png) no-repeat;
+	padding-top:50px;
+	float:left;	
+}
+#footer_right{
+	width: 440px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/footer_left_bg.png) no-repeat;
+	padding-top:50px;
+	float:left;	
+}
+/************************************Footer Menu*********************************/
+
+#footer_left ul {
+	list-style: none;
+	margin:0px;
+	margin-bottom:10px;
+	padding:0px;
+}
+#footer_left li {
+	display: inline;
+}
+#footer_left a, #footer_left .separator {
+	line-height: 20px;
+	height:20px;
+	color: #236005;
+	font-size: 12px;	
+	text-decoration: none;
+	display: block;
+	text-align: left;
+	width:190px;
+}
+#footer_left a:hover {
+	text-decoration:underline;
+}
+/*****************************Section Module***********************************/
+#sectionModuleLink a{
+	padding:3px 0;
+	display:block;
+	text-decoration:none;
+	color:#4c4c4c;
+}
+#sectionModuleLink a:hover{
+	text-decoration:underline;
+}
+/********************************Help Leafs**********************************************/
+.help_leaf{
+	height:105px;
+	width:94px;
+	margin-right:2px;
+	padding: 145px 10px 0px 10px;
+	text-align:center;	
+	display:block;
+	float:left;
+	text-decoration:none;
+	font-size:14px;
+	color:#402358;
+	outline:none;
+}
+a:hover.help_leaf{
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/help_hover.png);
+}
+
+/********************************pagenav***************************************/
+p.counter,span.pagenav, a.pagenav{
+	color:#454545;
+}
+
+
+
+/******************************************************************************/
+h1{
+	color:#424242;
+	font-size:16px;
+	font-weight:bold;
+}
+h2, h2 a{
+	color:#424242;
+	font-size:16px;
+	font-weight:bold;
+}
+h3{
+	color:#7139a2;
+	font-size:20px;
+	font-weight:bold;
+    text-align: center;
+
+}
+h4{
+	color:#69c121;
+	font-size:15px;
+	font-weight:bold;
+}
+
+h5{
+	color:#8b5db4;
+	font-size:13px;
+	font-weight:bold;
+}
+h6{
+	color:#4c4c4c;
+	font-size:12px;
+	font-weight:bold;
+
+}
+p{
+	color:#4c4c4c;
+}
+ol li, ul li{
+	color:#4c4c4c;
+}
+
+a{
+	text-decoration:none;
+	color:#5b3180;
+	font-size:12px;
+	font-weight:bold;
+}
+a:hover{
+	color:#ff962e;
+}
+
+p, up, ol, h1, h2, h3, h4, h5, h6{
+	margin-bottom:10px;
+}
+
+ul,ol{
+	padding-left:25px;
+}
+
+.buttonheading{
+	float:right;
+}
+div.thumbsup-intro a{
+	text-decoration:none; 
+	font-size:12px; 
+	font-weight:bold; 
+	color:#5b3180;
+}
+
+/***************************Virtuemart*****************************************/
+.product_details_link{
+	font-size:11px;
+	color:#026bd1;
+	display:block;
+	width:50px;
+	height:15px;
+	float:left;
+	line-height:15px;
+}
+.addtocart_button{
+	font:11px Arial,Helvetica,sans-serif;
+	font-weight:normal;
+	color:#026bd1;
+	width:80px;
+	float:left;
+	height:15px;
+	background:none;
+	vertical-align: top;
+	text-align:right;
+	overflow:hidden;
+	text-decoration:underline;
+	border-left:1px solid #bebebe;	
+}
+.browseProductTitle{
+	display:block;
+	height:60px;
+	margin:0;
+	padding:0;
+	width:100%;
+	flaot:none;	
+}
+.browseProductTitle a{
+	text-decoration:none;
+	font-size:13px;
+	color:#363636;
+	font-weight:normal;	
+}
+.browsePriceContainer{
+	font-size:13px;
+	color:#026bd1;
+	font-weight:bold;
+	float:none;
+	margin:0 0 10px 0;
+	width:100%;	
+}
+.browseProductDescription{
+	font-size:11px;
+	color:#363636;
+	float:none;
+	margin:0 0 10px 0;
+	width:100%;	
+	height:100px;
+}
+.browseProduct{
+	 float:left;
+	 width:180px;
+	 text-align:top;
+	 padding:0px 16px 0px 0px;
+	 margin-right:5px;
+	 margin-bottom:20px;
+}
+.browseProductContainer{
+	padding:0;
+	padding-bottom:20px;
+	border-bottom: 1px dotted #bebebe;
+}
+.browseProduct.rowLast{
+	border-right:none;
+}
+#browsePageNav{
+	margin-top:30px;
+}
+.browsePagecounter{
+	width:200px;
+	float:left;
+}
+.browsePagelinks{
+	width:400px;
+	float:right;
+	text-align: right;
+}
+.browseProductImageContainer {
+    float: none;
+    width: 100%;
+	text-align:center;
+	margin-bottom:15px;
+}
+.hide, .browseLimitbox, .browseRatingContainer {
+    display: none;
+    float: none;
+}
+
+
+
+#product_detail_block{}
+#product_detail_block .product_image{
+	width:240px;
+	height:240px;
+	text-align:center;
+	/*border:1px solid #bebebe;*/
+	float:left;
+}
+#product_detail_block .product_image a{
+	font-size:11px;
+	font-weight:bold;
+	color:#363636;
+	text-decoration:none;
+}
+#product_detail_block .product_image a div{
+	width:210px;
+	height:20px;
+	line-height:20px;
+	padding-left:30px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/larger_image.png) 70px top no-repeat; 
+	
+}
+#product_detail_block .quantity_box_button_up{
+	background-image: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/quantity_up.png);
+}
+#product_detail_block .quantity_box_button_down{
+	background-image: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/quantity_down.png);
+}
+#product_detail_block .quantity_box_button{
+	border:none;
+	width:15px;
+	height:13px;
+}
+
+#product_detail_block .product_details{
+	width:340px;
+	float:right;
+}
+#product_detail_block .product_details h4{
+	padding-top:20px;
+	font-size:13px;
+	font-weight:bold;
+	color:#363636;
+}
+#product_detail_block .product_details #product_price{
+	width:100px;
+	height:32px;
+	float:right;
+	text-align:center;
+	font-size:20px;
+	font-weight:normal;
+	line-height:32px;
+	color:#363636;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/product_price_bg.png);
+}
+#product_detail_block .product_details p{
+	color:#363636;
+}
+#product_detail_block .product_details .vmCartContainer{
+	background:none;
+	border:none;
+	width:100%;	
+}
+#product_detail_block .product_details .addtocart_button{
+	background:none;
+	width: 86px;
+	height:22px;
+	float:none;
+}
+
+
+
+#checkout_table_heading{
+	width:600px;
+	height:32px;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/checkout_table_heading.png);
+}
+#checkout_table{
+	margin-left:1px;
+	width:600px;
+	font-size:12px;
+	font-weight:normal;
+	color:#2c2c2c;
+	border-collapse:collapse;
+}
+#checkout_table td{
+	border-bottom: 1px solid #bebebe;
+}
+.checkout_table_cName{
+	width: 240px;
+	height:18px;
+	padding:12px 0px 10px 18px;
+	
+}
+.checkout_table_cName a strong{
+	font-size:12px;
+	font-weight:normal;
+	color:#2c2c2c;
+	text-decoration:none;	
+}
+.checkout_table_cName a{
+	text-decoration:none;
+}
+.checkout_table_cPrice{
+	width: 99px;
+	height:18px;
+	padding:12px 0px 10px 10px;
+}
+.checkout_table_cQuantity{
+	width: 162px;
+	height:30px;
+	padding:5px 0px 5px 18px;
+}
+#update_quantity_input{
+	float:left;
+	width:50px;
+	height:25px;
+	padding-top:5px;
+	margin-right:5px;
+}
+.checkout_table_cSubtotal{
+	width: 90px;
+	height:18px;
+	padding:12px 0px 10px 10px;
+}
+#summary_table{
+	width: 285px;
+	float:right;
+	margin-top:20px;
+	margin-right:15px;
+}
+#summary_table table{
+	border-collapse:collapse;
+}
+#summary_table table td{
+	border: 1px solid #bebebe;
+}
+#summary_table table .title{
+	width:160px;
+	height:40px;
+	padding-left:20px;
+	font-size:14px;
+	font-weight:bold;
+	color:#4c4c4c;
+}
+#summary_table table .value{
+	width:87px;
+	padding-left:15px;
+	height:40px;
+	font-size:12px;
+	font-weight:normal;
+	color:#2c2c2c;
+}
+#shoppingcart_continue{
+	width:130px;
+	height:22px;
+	display:block;
+	background:url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/shoppingcart_continueshopping.png);
+	padding:0;
+	margin:0;
+	margin-right:15px;
+	float:right;
+}
+#shoppingcart_checkout{
+	width:83px;
+	height:22px;
+	display:block;
+	padding:0;
+	float:right;
+	margin-right:15px;
+}
+
+
+.checkout_login{
+	font-size:14px;
+	font-weight:bold;
+	color:#026bd1;
+	margin-bottom:15px;
+}
+.checkout_login span{
+	font-size:15px;
+	font-weight:normal;
+	color:#2c2c2c;
+}
+.vm_login_form{
+	font-size:15px;
+	font-weight:normal;
+	color:#2c2c2c;
+}
+.vm_login_form .button{
+	height:22px;
+	margin-right:10px;
+}
+.vm_login_form #lostpassword{
+	margin-left:10px;
+	color:#5b3180;
+	font-size:12px;
+	font-weight:bold;
+}
+.shop_error {
+    background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/shop_error_bg.png) no-repeat 0 0 ;
+	border:none;
+	height:60px;
+	overflow:hidden;
+}
+#passwd_login_label, #username_login_label{
+	float:left;
+	width:80px;
+	margin-bottom:10px;
+	font-size:12px;
+	font-weight:normal;
+	color:#4c4c4c;
+}
+#username_login, #passwd_login{
+	width:150px;
+}
+#registerform_requiredtext{
+	font-size:12px;
+	font-weight:normal;
+	color:#4c4c4c;
+	margin-bottom:15px;	
+	
+}
+#vm_registration_form{
+	margin-left:20px;
+	font-size:13px;
+	font-weight:normal;
+	color:#2c2c2c;
+}
+#vm_registration_form .formLabel{
+	width:135px;
+	font-weight:normal;
+	text-align:left;
+}
+#vm_registration_form .formLabel strong{
+	color:#4c4c4c;
+}
+.formLabel#delimiter_userinfo_div, .formLabel#delimiter_billto_div{
+	font-weight:bold;
+}
+.formLabel#delimiter_sendregistration_div{
+	font-weight:bold;
+	color:#4c4c4c;	
+}
+.formLabel#agreed_div{
+	width:300px;
+	margin-bottom:10px;	
+}
+.formLabel#agreed_div a{
+	color:#5b3180;
+	font-size:12px;
+	font-weight:bold;
+}
+.formField#agreed_input{
+	width:50px;	
+}
+.formField input[type="text"], .formField input[type="password"]{
+	padding:0;
+	margin:0;
+	*margin-left:-22px;	
+}
+#send_registration_btn{
+	margin-left:15px;
+}
+.hide, .browseLimitbox, .browseRatingContainer{
+	display:none;
+	float:none;
+}
+#vm_honeypot_div,#vm_honeypot_input{ display:none;}
+
+.login_button a{
+background-image: url(http://www.eatingdisorders.org.au/images/stories/button_ed.png);
+background-position:bottom;
+background-repeat: no-repeat;
+display: inline-block;
+text-indent: -9999px;
+height: 31px;
+width: 165px;
+margin-bottom: 10px;
+}
+
+.login_button a:hover{
+background-position:top;
+}
+#navigation_wrapper .menu li ul li ul{
+margin-left: 300px;
+margin-top: -25px;
+}
+
+/******************Style Fix after upgrade to 3.2 from 1.5*******************/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+.item-page .actions {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+}
+
+.item-page .actions li {
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: 15px;
+	float: left;
+}
+
+.item-page .actions li a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+}
+
+.item-page .actions .print-icon a { background: url(http://www.eatingdisorders.org.au/images/M_images/printButton.png); }
+.item-page .actions .email-icon a { background: url(http://www.eatingdisorders.org.au/images/M_images/emailButton.png); }
+.item-page .actions .increase-font a { background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/article_largefont.png); }
+.item-page .actions .decrease-font a { background: url(http://www.eatingdisorders.org.au/templates/eatingdisorders/images/article_smallfont.png); }
+
+.item-page dl.article-info {
+	width: 100%;
+	border-top: 1px dotted #323232;
+	padding-top: 10px;
+	color: #4c4c4c;
+}
+
+.blog .items-row {
+	width: 610px;
+	margin-bottom: 50px;
+}
+
+.blog .item {
+	width: 179px;
+	margin-left: 36px;
+	float: left;
+}
+
+.blog .column-1 {
+	margin-left: 0;
+}
+
+.blog .item h2 a {
+	color: #7139a2;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.blog .item-image {
+	overflow: hidden;
+	text-align: center;
+}
+
+.blog .item-image img {
+	max-width: 100%;
+}
+
+.blog--books .item:first-child {
+	margin-left: 0;
+}
+
+.blog--books .item .image-box{
+    display:table;
+    height: 260px;
+    width:100%
+}
+
+.blog--books .item .image-box a img{
+    max-height:260px;
+    max-width:179px;
+    height: auto;
+    width:auto;
+}
+.blog--books .item .image-box a{
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/******************Pagination**********************/
+ul.pagination{
+display:block;
+min-height:1.5rem;
+margin-left:-0.3125rem
+}
+
+ul.pagination li{
+height:1.5rem;
+color:#222;
+font-size:0.875rem;
+margin-left:0.3125rem
+}
+
+
+
+ul.pagination li a,ul.pagination li button{
+display:block;
+padding:0.0625rem 0.625rem 0.0625rem;
+color:#999;
+background:none;
+border-radius:3px;font-weight:normal;
+font-size:1em;
+line-height:inherit;
+transition:background-color 300ms ease-out
+}
+
+ul.pagination li:hover a,ul.pagination li a:focus,ul.pagination li:hover button,ul.pagination li button:focus{
+background:#e6e6e6
+}
+
+ul.pagination li.unavailable a,ul.pagination li.unavailable button{
+cursor:default;
+color:#999
+}
+
+ul.pagination li.unavailable:hover a,ul.pagination li.unavailable a:focus,ul.pagination li.unavailable:hover button,ul.pagination li.unavailable button:focus{
+background:transparent
+}
+
+ul.pagination li.current a,ul.pagination li.current button{
+background:#008cba;
+color:#fff;
+font-weight:bold;
+cursor:default
+}
+
+ul.pagination li.current a:hover,ul.pagination li.current a:focus,ul.pagination li.current button:hover,ul.pagination li.current button:focus{
+background:#008cba
+}
+
+ul.pagination li{
+float:left;display:block
+}
+
+.pagination-centered{
+text-align:center
+}
+
+.pagination-centered ul.pagination li{
+float:none;
+display:inline-block
+}
+
+/**.pagination ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  text-align: center;
+}
+
+.pagination li {
+	display: inline-block;
+	padding: 0 2px;
+  text-align: center;
+}
+
+.pagination .pagination-start .pagenav:before { content: '<< '; font-weight: normal; text-align: center; }
+.pagination .pagination-prev .pagenav:before { content: '< '; font-weight: normal;  text-align: center; }
+.pagination .pagination-end .pagenav:after { content: '>> '; font-weight: normal;  text-align: center; }
+.pagination .pagination-next .pagenav:after { content: '> '; font-weight: normal;  text-align: center; }  */
+
+.pager {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.pager li {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	margin-top: 10px;
+	margin-right: 45px;
+}
+
+.moduletable.mod-cat-list {
+	margin-top: 20px;
+	width: 221px;
+	background: #f5f5f5;
+	padding: 20px 20px;
+}
+
+.mod-cat-list ul {
+	list-style: none;
+	padding: 0 0 20px;
+	margin: 0;
+}
+
+.mod-cat-list h4 {
+	margin: 0;
+}
+
+.mod-cat-list a {
+	padding: 3px 0;
+	display: block;
+	text-decoration: none;
+	color: #4c4c4c;
+}
+
+#xmap ul.level_0 {
+	border-bottom: 1px solid #000000;
+}
+
+.alert {
+	padding: 8px 35px 8px 14px;
+	margin-bottom: 18px;
+	text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	background-color: #fcf8e3;
+	border: 1px solid #fbeed5;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	position: relative;
+}
+.alert,
+.alert h4 {
+	color: #c09853;
+}
+.alert .close {
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	line-height: 18px;
+	cursor: pointer;
+}
+.alert-success {
+	background-color: #dff0d8;
+	border-color: #d6e9c6;
+	color: #468847;
+}
+.alert-success h4 {
+	color: #468847;
+}
+.alert-danger,
+.alert-error {
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+}
+.alert-danger h4,
+.alert-error h4 {
+	color: #b94a48;
+}
+.alert-info {
+	background-color: #d9edf7;
+	border-color: #bce8f1;
+	color: #3a87ad;
+}
+.alert-info h4 {
+	color: #3a87ad;
+}
+.alert-block {
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+	margin-bottom: 0;
+}
+.alert-block p + p {
+	margin-top: 5px;
+}
+
+.books-categories {
+	list-style: none;
+	padding: 0;
+	margin: 50px 0 0;
+}
+
+.books-categories__item {
+	display: block;
+	float: left;
+	width: 50%;
+	height: 300px;
+	text-align: center;
+}
+
+.books-categories__item a {
+	display: block;
+	margin-top: 20px;
+	color: #69C121;
+	font-size: 15px;
+	font-weight: bold;
+}
+.custom_banner_tree .banner_tree_mobile img{display:none;}
+
+#navigation li.item-7 ul {display:none;}
+
+/***************View user panel***************************/
+.view h2 {
+  color: #6F6F6F;
+}
+
+.view .columns.strings {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+}
+
+.view .numbers {
+  background-color: #B7E3EC;
+  color: #FFF;
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right: 0.7rem;
+}
+
+.view .columns.dates {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+  background-color:#DCE47E;
+  color: #fff;
+}
+
+.view .columns.booleans {
+  border-radius: 3px;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.24);
+  margin-right:0.7rem;
+  background-color: #8D6E65;
+  color: #fff;
+}
+
+.view .strings p {
+  border-bottom: 1px solid #eee;
+}
+.view .numbers .subheader, .view .dates .subheader {
+  color:#747474;
+}
+.view .booleans .subheader {
+  color: #E9E9E9
+}
+
+.view .texts .columns {
+  margin-top:1.2rem;
+  border-bottom: 1px solid #eee;
+}
+
+.actions.columns {
+  margin-top:1rem;
+  border-left: 5px solid #15848F;
+  padding-left: 15px;
+  padding: 32px 20px;
+}
+
+.actions.columns h3 {
+  color:#15848F;
+}
+
+.large-2 {
+    width: 10.6667%;
+}
+
+.large-5 {
+    width: 41.6667%;
+}
+
+.columns {
+    position: relative;
+    padding-left: 0.9375rem;
+        padding-left-value: 0.9375rem;
+        padding-left-ltr-source: physical;
+        padding-left-rtl-source: physical;
+    padding-right: 0.9375rem;
+        padding-right-value: 0.9375rem;
+        padding-right-ltr-source: physical;
+        padding-right-rtl-source: physical;
+    float: left;
+}
+
+div.message {
+  border-style: solid;
+  border-width: 1px;
+  display: block;
+  font-size: 16px;
+  font-weight: normal;
+  position: relative;
+  padding: 0.4rem 0.4rem 0.4rem 5%;
+  transition: opacity 300ms ease-out 0s;
+  background-color: #DCE47E;
+  border-color: #DCE47E;
+  color: #626262;
+  margin-bottom: 10px;
+}
+
+div.message.error {
+  background-color: #C3232D;
+  border-color: #C3232D;
+  color: #FFF;
+  font-size: 16px;
+}
+
+div.message:before {
+  line-height: 0px;
+  font-size: 20px;
+  height: 12px;
+  width: 12px;
+  border-radius: 15px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  left: -11px;
+  background-color: #FFF;
+  padding: 12px 14px 12px 10px;
+  content: "i";
+  color: #DCE47E;
+}
+
+div.message.error:before {
+  padding: 12px 12px 7px 12px;
+  color: #C3232D;
+  content: "x";
+}
+
+ul#noDesign {
+    list-style-type: none;
+}
+
+li#hover:hover{
+    cursor: pointer;
+}
+
+.invoiceLogo{
+    float: left;
+    padding-right:20px;
+}
+
+.invoiceFrom{
+    font-size: 8pt;
+}
+
+.pull-right {
+    float: right;
+}
+
+.leftPadding{
+    padding-left: 30px;
+}
+
+.tabs {
+    width:100%;
+    display:inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+.tab-links:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links li {
+    margin:0px 5px;
+    float:left;
+    list-style:none;
+}
+
+.tab-links a {
+    padding:9px 15px;
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    background: #ebebeb;
+    font-size:16px;
+    font-weight:600;
+    color:#4c4c4c;
+    transition:all linear 0.15s;
+}
+
+.tab-links a:hover {
+    background:#EBEBEB;
+    text-decoration:none;
+}
+
+li.active a, li.active a:hover {
+    background:#fff;
+    color:#4c4c4c;
+}
+
+/*----- Content of Tabs -----*/
+.tab-content {
+    padding:15px;
+    border-radius:3px;
+    box-shadow:-1px 1px 1px rgba(0,0,0,0.15);
+    background:#fff;
+}
+
+.tab {
+    display:none;
+}
+
+.tab.active {
+    display:block;
+}
+
+.inlineFloat{
+    display: inline;
+    float: right;
+}
+
+.keyword{
+    display: inline;
+    float: left;
+    width: 350px;
+    height: 30px;
+}
+
+.filter{
+    margin-left: 100px;
+    display: inline;
+    float: left;
+    width: 100px;
+    height: 32px;
+}
+
+.pdfButton a
+{
+    background: #5054da url(img/overlay.png) repeat-x;
+    padding: 6px 8px 6px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:16px;
+    margin:5px;
+    position:static;
+
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+}
+
+.button
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:18px;
+    margin:10px;
+}
+
+.button2
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    font-size:18px;
+    margin:10px;
+}
+
+.notes {
+    float: right;
+    color: #555555;
+}

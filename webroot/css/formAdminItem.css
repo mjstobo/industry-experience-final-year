@@ -1,0 +1,167 @@
+.register {
+    width: 1000px;
+    padding: 20px;
+    line-height: 35px;
+}
+
+h1 {
+    font-weight:200;
+    color: #888888;
+    font-size:22pt;
+    background: transparent url(img/h1.png) no-repeat center left;
+    padding-left:33px;
+    margin:7px 5px 8px 8px;
+    display: inline;
+}
+
+fieldset{
+    padding-bottom: 30px;
+}
+
+.error-message {
+    font-style: italic;
+    color: red;
+    display: inline;
+    position: absolute;
+    width: 200px;
+}
+
+.error-message li {
+    font-style: italic;
+    color: red;
+    display: inline;
+    position: absolute;
+    width: 200px;
+}
+
+.button
+{
+    background: #abda0f url(img/overlay.png) repeat-x;
+    padding: 8px 10px 8px;
+    color: #fff;
+    text-decoration: none;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    cursor: pointer;
+    float:left;
+    font-size:18px;
+    margin:10px;
+}
+
+input {
+    display: inline;
+    float: left;
+    height: 2em;
+}
+
+label {
+    display: inline;
+    float: left;
+    width: 100px;
+    text-align: left;
+    margin-right: 10px;
+    margin-bottom: 0px;
+    font-weight: 500;
+}
+
+
+#mandatory{
+    float: right;
+    display: inherit;
+    padding-right: 100px;
+    font-style: italic;
+    color: #9f9f9f;
+}
+
+form.register legend
+{
+    color: #69c121;
+    padding:2px;
+    margin-left: 14px;
+    font-weight:bold;
+    font-size: 20px;
+    font-weight:100;
+}
+
+.select{
+    height:40px;
+}
+
+form.register fieldset.row1 .option input{
+    width: 150px;
+}
+
+form.register fieldset .status select {
+    width: 120px;
+}
+
+form.register fieldset .title input{
+    width: 540px;
+}
+
+form.register fieldset .author select {
+    width: 540px;
+}
+
+form.register fieldset .barcode input {
+     width: 180px;
+}
+
+form.register fieldset .copies input {
+    width: 80px;
+}
+
+form.register fieldset .copies label {
+    width: 50px;
+    margin-left: 100px;
+}
+
+form.register fieldset .edition input {
+    width: 200px;
+}
+
+form.register fieldset .edition label {
+    width: 50px;
+    margin-left: 100px;
+}
+
+form.register fieldset .inline{
+    display:inline-block;
+    position:absolute;
+}
+
+form.register fieldset .language{
+    display:inline-block;
+    position:relative;
+    left: 340px;
+}
+
+form.register fieldset .language label{
+    width:59px;
+}
+
+form.register fieldset .itemType{
+    display:inline-block;
+    position: relative;
+    left: 364px;
+}
+
+form.register fieldset .itemType label{
+    width:65px;
+}
+
+form.register fieldset .catalogue{
+    display:inline-block;
+}
+
+form.register fieldset .subject{
+    margin-left: 79px;
+    display:inline-block;
+}
+
+form.register fieldset .subject label{
+    width: 50px;
+}
