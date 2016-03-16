@@ -13,6 +13,7 @@
     <table id="clickable" class="table table-striped table-hover">
     <thead>
         <tr>
+            <th>Member ID</th>
             <th>Member Type</th>
             <th>Acc. Status</th>
             <th>Name</th>
@@ -26,6 +27,7 @@
     <tbody>
     <?php foreach ($users as $user): ?>
         <tr href="<?php echo $this->Url->build(["prefix"=>"admin", "controller"=>"users", "action" => "view", $user->id]); ?>">
+        <td><?= h($user->id); ?></td>
             <td><?= h($user->user_type->user_type_name); ?></td>
             <td><?= h($user->mem) ?></td>
             <td><?= h($user->given_name)." ".h($user->family_name) ?></td>
