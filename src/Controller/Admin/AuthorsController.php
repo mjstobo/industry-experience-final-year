@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 use App\Controller\AppController;
 use Cake\ORM\Table;
 use Cake\ORM\TableRegistry;
+use Cake\Event\Event;
 
 /**
  * Authors Controller
@@ -12,7 +13,12 @@ use Cake\ORM\TableRegistry;
  */
 class AuthorsController extends AppController
 {
+    public function beforeFilter(Event $event)
+    {
 
+            $this->Auth->allow(['index', 'view', 'edit', 'delete']);
+
+    }
     /**
      * Index method
      *
@@ -26,26 +32,7 @@ class AuthorsController extends AppController
         $authorTable = TableRegistry::get('Authors');
         $author = $authorTable->find()
             ->all();
-        $itemauthors = TableRegistry::get('ItemAuthors');
-
-
-        foreach ($author as $search)
-        {
-            $itemauthor = $itemauthors->find()
-                ->where(['author_id'=>$search->id])
-                ->toArray();
-            if(!$itemauthor)
-            {
-                $deletable = true;
-            }
-            else{
-                $deletable = false;
-            }
-            $this->set('deletable',$deletable);
-        }
-
         $this->set('authors', $authors);
-        $this->set('itemauthors',$itemauthors);
         $this->set('author', $author);
         $this->set('_serialize', ['authors']);
     }
@@ -66,7 +53,22 @@ class AuthorsController extends AppController
             ->where(['author_id'=>$id])
             ->all();
 
+            $itemauthor = $itemauthorstable->find()
+                ->where(['author_id'=>$id])
+                ->first();
+        if($itemauthor)
+        {
+            $deletable = false;
+        }
+        else
+        {
+            $deletable = true;
 
+        }
+
+        $this->set('itemauthor',$itemauthor);
+        $this->set('id',$id);
+        $this->set('deletable', $deletable);
         $this->set('author', $author);
         $this->set('_serialize', ['author']);
     }
@@ -129,7 +131,7 @@ class AuthorsController extends AppController
     public function delete($id = null)
     {
         $this->layout = 'admin';
-        $this->request->allowMethod(['post', 'delete']);
+       // $this->request->allowMethod(['post', 'delete']);
         $author = $this->Authors->get($id);
         if ($this->Authors->delete($author)) {
             $this->Flash->success(__('The author has been deleted.'));

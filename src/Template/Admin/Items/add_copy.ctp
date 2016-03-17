@@ -26,7 +26,7 @@
                 <div class="form-group">
                     <label class="control-label col-md-3 col-sm-3 col-xs-12">Barcode <span class="required">*</span></label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
-                        <?php echo $this->Form->input('barcode', ['label'=>'Barcode', 'label' => false, 'class'=>'form-control']); ?>
+                        <?php echo $this->Form->input('barcode',['autoFocus' => 'autoFocus','label'=>'Barcode', 'label' => false, 'class'=>'form-control']); ?>
                     </div>
                 </div>
         </div>

@@ -2,6 +2,8 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Database\Schema\Table;
+use Cake\ORM\TableRegistry;
 
 /**
  * Subjects Controller
@@ -36,6 +38,25 @@ class SubjectsController extends AppController
         $subject = $this->Subjects->get($id, [
             'contain' => ['Items','Items.Publishers','Items.Catalogues','Items.Years','Items.ItemTypes','Items.Authors']
         ]);
+        $itemSubjectTable = TableRegistry::get('ItemSubjects');
+
+        $itemSubject = $itemSubjectTable->find()
+            ->where(['subject_id'=>$id])
+            ->first();
+        if($itemSubject)
+        {
+            $deletable = false;
+        }
+        else
+        {
+            $deletable = true;
+
+        }
+
+        $this->set('deletable',$deletable);
+        $this->set('id',$id);
+
+
         $this->set('subject', $subject);
         $this->set('_serialize', ['subject']);
     }
@@ -95,7 +116,7 @@ class SubjectsController extends AppController
      */
     public function delete($id = null)
     {   $this->layout = 'admin';
-        $this->request->allowMethod(['post', 'delete']);
+        //$this->request->allowMethod(['post', 'delete']);
         $subject = $this->Subjects->get($id);
         if ($this->Subjects->delete($subject)) {
             $this->Flash->success(__('The subject has been deleted.'));

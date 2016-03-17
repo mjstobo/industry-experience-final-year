@@ -1,4 +1,5 @@
 <?php
+echo $this->Html->css('viewUserAdmin.css');
   echo $this->Html->css(['jquery.dataTables.min']);
   echo $this->Html->script(['jquery-2.1.3.min', 'jquery.dataTables.min']);
 ?>
@@ -6,6 +7,11 @@
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader">Related Items for <em><?= h($publisher->publisher_name) ?></em></h4><br>
+     <?php if ($deletable == true)
+            { ?>
+            <span class="deleteButton"><?= $this->Html->link(__('Delete Publisher'), ['prefix'=>'admin','controller'=>'publishers','action'=>'delete',$id]) ?> </span>
+            <?php
+            }?>
     <?php if (!empty($publisher->items)): ?>
     <table id="users" cellpadding="0" cellspacing="0" class="table table-striped table-hover">
         <tr>

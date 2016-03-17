@@ -1,7 +1,13 @@
-
+<?php echo $this->Html->css('viewUserAdmin.css'); ?>
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader">Related Items for <em><?= h($subject->subject_name) ?></em></h4><br>
+     <?php if ($deletable == true)
+        { ?>
+        <span class="deleteButton"><?= $this->Html->link(__('Delete Subject'), ['prefix'=>'admin','controller'=>'subjects','action'=>'delete',$id]) ?> </span>
+        <?php
+        }?>
+
     <?php if (!empty($subject->items)): ?>
     <table id="users" cellpadding="0" cellspacing="0" class="table table-striped table-hover">
         <tr>

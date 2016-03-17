@@ -35,8 +35,22 @@ class PublishersController extends AppController
     {   $this->layout = 'admin';
         $publisher = $this->Publishers->get($id, [
             'contain' => ['Items','Items.Publishers','Items.Catalogues','Items.Years','Items.ItemTypes','Items.Authors']
+
         ]);
+
+
+        if($publisher->items)
+        {
+            $deleteable=false;
+        }
+        else{
+
+            $deleteable = true;
+
+        }
         $this->set('publisher', $publisher);
+        $this->set('id',$id);
+        $this->set('deletable',$deleteable);
         $this->set('_serialize', ['publisher']);
     }
 
@@ -95,7 +109,7 @@ class PublishersController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
+       // $this->request->allowMethod(['post', 'delete']);
         $publisher = $this->Publishers->get($id);
         if ($this->Publishers->delete($publisher)) {
             $this->Flash->success(__('The publisher has been deleted.'));

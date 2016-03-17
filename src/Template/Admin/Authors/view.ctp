@@ -1,7 +1,13 @@
-
+ <?php echo $this->Html->css('viewUserAdmin.css'); ?>
 <div class="related row">
     <div class="column large-12">
     <h4 class="subheader">Related Items</h4>
+
+    <?php if ($deletable == true)
+    { ?>
+    <span class="deleteButton"><?= $this->Html->link(__('Delete Author'), ['prefix'=>'admin','controller'=>'authors','action'=>'delete',$id]) ?> </span>
+    <?php
+    }?>
 
     <table cellpadding="0" cellspacing="0" class="table table-striped table-hover">
         <tr>

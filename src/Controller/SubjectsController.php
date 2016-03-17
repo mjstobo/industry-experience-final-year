@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
+use Cake\Event\Event;
 
 /**
  * Subjects Controller
@@ -11,6 +12,12 @@ use Cake\ORM\TableRegistry;
  */
 class SubjectsController extends AppController
 {
+    public function beforeFilter(Event $event)
+    {
+
+        $this->Auth->allow(['index', 'view', 'edit', 'delete']);
+
+    }
 
     /**
      * Index method
@@ -38,7 +45,6 @@ class SubjectsController extends AppController
            ->contain(['Items.ItemTypes','Items.Years'])
            ->where(['subject_id'=>$id])
            ->all();
-
 
         $this->set('subject', $subject);
         $this->set('_serialize', ['subject']);
@@ -99,7 +105,7 @@ class SubjectsController extends AppController
      */
     public function delete($id = null)
     {
-        $this->request->allowMethod(['post', 'delete']);
+       // $this->request->allowMethod(['post', 'delete']);
         $subject = $this->Subjects->get($id);
         if ($this->Subjects->delete($subject)) {
             $this->Flash->success(__('The subject has been deleted.'));
