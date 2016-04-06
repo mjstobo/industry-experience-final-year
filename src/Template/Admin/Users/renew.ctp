@@ -25,7 +25,7 @@ echo $this->Html->css('viewUserAdmin.css');
 <?php } else { ?>
 <br>
 <div class="clickable index">
-    <span class="inline floatLeft"><h1>Member Borrowing - Results matching: <?php echo "'".$term."'"; ?></h1></span><span class="activeButton inline floatLeft">&nbsp&nbsp&nbsp
+    <span class="inline floatLeft"><h1>Member Renewal - Results matching: <?php echo "'".$term."'"; ?></h1></span><span class="activeButton inline floatLeft">&nbsp&nbsp&nbsp
     <?= $this->Html->link('New Search', ['action'=>'renew']) ?> </span>
     <br><br>
     <table id="clickable" class="table table-striped table-hover">
