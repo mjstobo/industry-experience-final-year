@@ -408,6 +408,7 @@ var $helpers=array("Html","Form");
                         $this->Flash->success('Your membership has been renewed');
                         $user_id = $this->request->session()->read('Auth.User.id');
                         $user_fname = $this->request->session()->read('Auth.User.given_name');
+                        $user_email = $this->request->session()->read ('Autg.User.email_address');
                         $user_lname = $this->request->session()->read('Auth.User.family_name');
                         $membership = $this->request->session()->read('membership');
                         $membership_id = $membership->id;
@@ -442,9 +443,9 @@ var $helpers=array("Html","Form");
 
                         $email->transport();
 
-                        $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to(['ie.expo.team14@gmail.com'])
-                            ->subject('Membership Renewal')
+                            ->subject($user_email)
                             ->send('Dear '.$salutation.' '.$user_fname.' '.$user_lname.','."\n"."\n"."\n".
                                 'You have renewed your membership for '.$duration_name.'.'."\n"."\n"
                                 .'Membership: '.$description."\n".'Effective from: '.$join."\n".'Expires on: '.$expiry."\n\n".'Amount Paid: $'.$price );
@@ -707,17 +708,18 @@ var $helpers=array("Html","Form");
                     $this->Auth->setUser($user->toArray());
 
                     $user_id = $this->request->session()->read('Auth.User.id');
+                    $user_email = $this->request->session()->read('Auth.User.email_address');
                     $memberships->user_id = $user_id;
                     $membershipTable->save($memberships);
 
 
                     $email1 = new Email('default');
                     $email1->transport();
-                    $email1->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
+                    $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->template('registration')
                         ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user->email_address,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
-                        ->to(['ie.expo.team14@gmail.com'])
+                        ->to([$user_email])
                         ->subject('Thank you for joining EDV')
                         ->send();
 

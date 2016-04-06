@@ -821,9 +821,9 @@ class UsersController extends AppController
                     if ($membershipTable->save($newMembership)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                            //->to($user[0]->email_address)
-                            ->to('ie.expo.team14@gmail.com')
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                            ->to($user[0]->email_address)
+                            //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
                             ->send('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
                                 'Your Membership has been renewed for ' . $query->duration->duration_name . '.' . "\n" . "\n"
@@ -860,9 +860,9 @@ class UsersController extends AppController
                     if ($membershipTable->save($currMem)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                            //->to($user[0]->email_address)
-                            ->to('ie.expo.team14@gmail.com')
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                            ->to($user[0]->email_address)
+                            //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
                             ->send('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
                                 'Your Membership has been renewed for ' . $query->duration->duration_name . '.' . "\n" . "\n"

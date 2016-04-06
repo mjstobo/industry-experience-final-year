@@ -197,8 +197,8 @@ public function returnItem()
 
                         $email->transport();
 
-                        $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                            ->to('ie.expo.team14@gmail.com')//change to $user_email
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                            ->to($user_email)//change to $user_email
                             ->template('reservedItemNotificationReturn')
                             ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$reserve->item->title])
                             ->emailformat('html')
@@ -209,8 +209,8 @@ public function returnItem()
 
                         $email->transport();
 
-                        $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                            ->to(['ie.expo.team14@gmail.com'])//change to edv email
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                            ->to(['reception@eatingdisorders.org.au'])//change to edv email
                             ->subject('Item Reservation')
                             ->send('Dear EDV, ' . "\n \n" . 'The following user as a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .
                                 $user_fname . ' ' . $user_lname . 'Phone: ' . $user_phone . "\n" . 'Email: ' . $user_email . "\n \n" . 'The requested copy' . "\n" . 'Barcode: ' . $reserve->item->item_copies[0]->barcode . "\n" . 'Title: ' . $reserve->item->title);
