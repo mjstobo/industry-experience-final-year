@@ -20,7 +20,7 @@
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $shelfSection->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $shelfSection->id]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $shelfSection->id], ['confirm' => __('Are you sure you want to delete # {0}?', $shelfSection->id)]) ?>
+               <!-- <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $shelfSection->id], ['confirm' => __('Are you sure you want to delete # {0}?', $shelfSection->id)]) ?> -->
             </td>
         </tr>
 

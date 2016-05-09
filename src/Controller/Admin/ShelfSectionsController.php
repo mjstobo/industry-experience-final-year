@@ -2,6 +2,8 @@
 namespace App\Controller\Admin;
 
 use App\Controller\AppController;
+use Cake\Database\Schema\Table;
+use Cake\ORM\TableRegistry;
 
 /**
  * ShelfSections Controller
@@ -36,7 +38,23 @@ class ShelfSectionsController extends AppController
         $shelfSection = $this->ShelfSections->get($id, [
             'contain' => []
         ]);
+
+        $itemstable = TableRegistry::get('Items');
+        $items = $itemstable->find()
+            ->where(['shelf_section_id'=>$id])
+            ->first();
+
+        if($items)
+        {
+            $deletable = false;
+
+        }
+        else
+                $deletable = true;
+
         $this->set('shelfSection', $shelfSection);
+        $this->set('deletable',$deletable);
+        $this->set('items',@$items);
         $this->set('_serialize', ['shelfSection']);
     }
 
@@ -100,6 +118,11 @@ class ShelfSectionsController extends AppController
         $this->layout = 'admin';
         $this->request->allowMethod(['post', 'delete']);
         $shelfSection = $this->ShelfSections->get($id);
+
+
+
+
+
         if ($this->ShelfSections->delete($shelfSection)) {
             $this->Flash->success(__('The shelf section has been deleted.'));
         } else {
