@@ -9,7 +9,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => true,
+    'debug' => false,
 
     /**
      * Configure basic information about the application.
@@ -184,12 +184,12 @@ return [
         'default' => [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
-           // 'host' => 'mail.members.eatingdisorders.org.au',
-           // 'port' => 587,
-           // 'timeout' => 30,
-           // 'username' => 'admin@members.eatingdisorders.org.au',
-           // 'password' => 'yrarb1l',
-           // 'tls' => false,
+           'host' => 'mail.members.eatingdisorders.org.au',
+           'port' => 587,
+           'timeout' => 30,
+           'username' => 'admin@members.eatingdisorders.org.au',
+           'password' => 'yrarb1l',
+           'tls' => false,
         ],
     ],
     'Email' => [

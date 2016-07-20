@@ -624,10 +624,10 @@ class UsersController extends AppController
             $newpw = $this->Users->generateRandomString(10);
             $user->password = $newpw;
             $users->save($user);
-            $res = $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
+            $res = $email->from(['admin@eatingdisorders.org.au' => 'EDV Website'])
                 ->to([$useremail])
                 ->subject('Your new password to log in for EDV')
-                ->send('Your new password is for EDV is: ' . $newpw . ' Please log in here http://ie.infotech.monash.edu/team14/build2/development/users/login');
+                ->send('Your new password is for EDV is: ' . $newpw . ' Please log in here http://members.eatingdisorders.org.au/users/login');
         } catch (Exception $e) {
 
             echo 'Exception : ', $e->getMessage(), "\n";

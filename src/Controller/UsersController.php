@@ -693,8 +693,8 @@ var $helpers=array("Html","Form");
                 if ($payments->save($newPayment)) {
                     $email = new Email('default');
                     $email->transport();
-                    $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                        ->to('ie.expo.team14@gmail.com')
+                    $email->from(['admin@eatingdisorders.org.au' => 'EDV Website'])
+                        ->to('')
                         ->subject('New Registered User')
                         ->send('A new user has been registered to EDV.
 

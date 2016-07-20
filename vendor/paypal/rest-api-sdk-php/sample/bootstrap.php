@@ -71,7 +71,7 @@ function getApiContext($clientId, $clientSecret)
 
     $apiContext->setConfig(
         array(
-            'mode' => 'sandbox',
+            'mode' => 'live',
             'log.LogEnabled' => true,
             'log.FileName' => '../PayPal.log',
             'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
