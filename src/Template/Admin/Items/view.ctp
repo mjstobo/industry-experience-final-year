@@ -12,7 +12,7 @@
     <table >
         <tr>
              <td class="title">
-                <h1><span class="inline"><?= h($item->title) ?>&nbsp&nbsp</span><span class="editButton buttonFloat"><?= $this->Html->link(__('Edit'), ['action' => 'edit', $item->id]) ?></span></h1><br>
+                <h1><span class="inline"><?= h($item->title." (CN: ".$item->call_number.")") ?>&nbsp&nbsp</span><span class="editButton buttonFloat"><?= $this->Html->link(__('Edit'), ['action' => 'edit', $item->id]) ?></span></h1><br>
                 <?php foreach ($item->authors as $author) : ?>
                 <?= $this->Html->link($author->author_name. " ; ", ['controller' => 'authors', 'action' => 'view', $author->id]) ?>
                                 <?php endforeach; ?><em>(Author)</em><br><br><br>
@@ -31,6 +31,11 @@
             <td colspan="3"><br>
             <h2>Details:</h2>
             <table>
+            
+            	<tr>
+                    <td><h3><strong><?= __('Call Number: ') ?></strong></h3></td>
+                    <td><?= $item->call_number ?></td>
+                </tr>
                 <tr>
                     <td><h3><?= __('Shelf Category: ') ?></h3></td>
                     <td><?= $item->shelf_section->shelf_name ?></td>
