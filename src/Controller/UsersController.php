@@ -443,7 +443,7 @@ var $helpers=array("Html","Form");
 
                         $email->transport();
 
-                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to(['ie.expo.team14@gmail.com'])
                             ->subject($user_email)
                             ->send('Dear '.$salutation.' '.$user_fname.' '.$user_lname.','."\n"."\n"."\n".
@@ -715,7 +715,7 @@ var $helpers=array("Html","Form");
 
                     $email1 = new Email('default');
                     $email1->transport();
-                    $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                    $email1->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->template('registration')
                         ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user->email_address,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
@@ -967,7 +967,7 @@ var $helpers=array("Html","Form");
                         $email->transport();
 
                         try {
-                            $res = $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                            $res = $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                                 ->to([$user['email_address'] => $user['given_name']])
                                 ->subject('Your new password to log in for EDV')
                                 ->send('Your new password for EDV is: ' . $newpw . ' Please log in here http://member.eatingdisorders.org.au/users/login');

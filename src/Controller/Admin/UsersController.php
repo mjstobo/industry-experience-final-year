@@ -821,7 +821,7 @@ class UsersController extends AppController
                     if ($membershipTable->save($newMembership)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
@@ -860,7 +860,7 @@ class UsersController extends AppController
                     if ($membershipTable->save($currMem)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')

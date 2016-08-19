@@ -86,7 +86,7 @@ class ItemsController extends AppController
 
                     $email->transport();
 
-                    $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                    $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->to($user_email)//change to $user_email
                         ->template('reservedItemNotificationReturn')
                         ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$reserve->item->title])
@@ -98,7 +98,7 @@ class ItemsController extends AppController
 
                     $email->transport();
 
-                    $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                    $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->to(['ie.expo.team14@gmail.com'])//change to edv email
                         ->subject('Item Reservation')
                         ->send('Dear EDV, ' . "\n \n" . 'The following user has a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .

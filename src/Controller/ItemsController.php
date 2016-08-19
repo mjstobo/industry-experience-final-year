@@ -702,7 +702,7 @@ class ItemsController extends AppController
 
             $email1 = new Email('default');
             $email1->transport();
-            $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+            $email1->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                 ->template('hold_item')
                 ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
@@ -1005,7 +1005,7 @@ class ItemsController extends AppController
 
                 $email1 = new Email('default');
                 $email1->transport();
-                $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email1->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->template('loan_item')
                     ->viewVars(['cart'=> $cart,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                     ->emailformat('html')
