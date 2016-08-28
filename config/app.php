@@ -184,18 +184,18 @@ return [
         'default' => [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
-           'host' => 'mail.members.eatingdisorders.org.au',
+            'host' => 'mail.members.eatingdisorders.org.au',
            'port' => 587,
-           'timeout' => 30,
-           'username' => 'admin@members.eatingdisorders.org.au',
-           'password' => 'yrarb1l',
-           'tls' => false,
+            'timeout' => 30,
+            'username' => 'admin@members.eatingdisorders.org.au',
+            'password' => 'yrarb1l',
+            'tls' => false,
         ],
     ],
     'Email' => [
         'default' => [
             'transport' => 'default',
-            'from' => 'you@localhost',
+            'from' => 'reception@eatingdisorders.org.au',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',
         ],
@@ -212,16 +212,16 @@ return [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => 'hshehata.com',
+            'host' => 'localhost',
             /**
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
              * the following line and set the port accordingly
              */
             'port' => '3306',
-            'username' => 'root',
-            'password' => 'admin',
-            'database' => 'edv',
+            'username' => 'eatingdi_root',
+            'password' => 'onefourtech',
+            'database' => 'eatingdi_database',
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'cacheMetadata' => true,

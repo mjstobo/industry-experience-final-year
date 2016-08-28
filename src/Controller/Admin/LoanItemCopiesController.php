@@ -197,7 +197,7 @@ public function returnItem()
 
                         $email->transport();
 
-                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user_email)//change to $user_email
                             ->template('reservedItemNotificationReturn')
                             ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$reserve->item->title])
@@ -209,7 +209,7 @@ public function returnItem()
 
                         $email->transport();
 
-                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to(['reception@eatingdisorders.org.au'])//change to edv email
                             ->subject('Item Reservation')
                             ->send('Dear EDV, ' . "\n \n" . 'The following user as a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .

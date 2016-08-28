@@ -27,7 +27,7 @@ echo $this->Html->script(['jquery-2.1.3.min', 'jquery.dataTables.min']);
         </thead>
         <tbody>
         <?php foreach ($loans as $loan): ?>
-        <tr class="clickable" data-href="loans/view/<?= h($loan->id); ?>">
+        <tr class="clickable" data-href="./view/<?= h($loan->id); ?>">
             <td><?= h($loan->user->id) ?></td>
             <td><?= h($loan->user->given_name)?> <?= h($loan->user->family_name)?></td>
             <td><?= h($loan->id)?> </td>

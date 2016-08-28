@@ -50,7 +50,7 @@ class CronsController extends AppController
 
                 $email->transport();
 
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user->user['email_address'] => $user->user['given_name']])
                    // ->to(['ie.expo.team14@gmail.com'])
                     ->template('membershipExpired')
@@ -93,7 +93,7 @@ class CronsController extends AppController
 
                 $email->transport();
 
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user->user['email_address'] => $user->user['given_name']])
                    // ->to(['ie.expo.team14@gmail.com'])
                     ->template('membershipRenewalReminder')
@@ -128,7 +128,7 @@ class CronsController extends AppController
             $email->transport();
 
             try {
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$check->user['email_address'] => $check->user['given_name']])
                     //->to(['ie.expo.team14@gmail.com'])
                     ->template('overdueNotice')
@@ -246,7 +246,7 @@ class CronsController extends AppController
 
                 $email->transport();
 
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                   //  ->to($user_email) //edvs email goes here
                     ->to(['reception@eatingdisorders.org.au'])
                     ->template('adminReturnItem')
@@ -255,7 +255,7 @@ class CronsController extends AppController
                     ->subject('Return to shelf')
                     ->send();
 
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     //  ->to($user_email) //edvs email goes here
                     ->to(['reception@eatingdisorders.org.au'])
                     ->template('reserve_expiry')

@@ -26,8 +26,8 @@ error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
 // Replace these values by entering your own ClientId and Secret by visiting https://developer.paypal.com/webapps/developer/applications/myapps
-$clientId = 'AYSq3RDGsmBLJE-otTkBtM-jBRd1TCQwFf9RGfwddNXWz0uFU9ztymylOhRS';
-$clientSecret = 'EGnHDxD_qRPdaLdZz8iCr8N7_MzF-YHPTkjs6NKYQvQSBngp4PTTVWkPZRbL';
+$clientId = 'AUcCWuauCFkFmZz2-GXwFMRI8QwXEpHk4wO4lG92pnraI8p_27uCm8_nCIyxiLmjmsS323cp80x5M3pw';
+$clientSecret = 'ELrNgQKrBomYrzDiLcQIJ93LN8UuMJaz12NhjCBG2qpEwewJ5cTseoxxSF_IFVeA6sOxJAaJk7SLpzkO';
 
 /** @var \Paypal\Rest\ApiContext $apiContext */
 $apiContext = getApiContext($clientId, $clientSecret);
@@ -74,7 +74,7 @@ function getApiContext($clientId, $clientSecret)
             'mode' => 'live',
             'log.LogEnabled' => true,
             'log.FileName' => '../PayPal.log',
-            'log.LogLevel' => 'DEBUG', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
+            'log.LogLevel' => 'FINE', // PLEASE USE `FINE` LEVEL FOR LOGGING IN LIVE ENVIRONMENTS
             'validation.level' => 'log',
             'cache.enabled' => true,
             // 'http.CURLOPT_CONNECTTIMEOUT' => 30

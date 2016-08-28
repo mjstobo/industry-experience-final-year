@@ -627,7 +627,7 @@ class UsersController extends AppController
             $res = $email->from(['admin@eatingdisorders.org.au' => 'EDV Website'])
                 ->to([$useremail])
                 ->subject('Your new password to log in for EDV')
-                ->send('Your new password is for EDV is: ' . $newpw . ' Please log in here http://members.eatingdisorders.org.au/users/login');
+                ->send('Your new password is for EDV is: ' . $newpw . ' Please log in here: http://members.eatingdisorders.org.au/users/login');
         } catch (Exception $e) {
 
             echo 'Exception : ', $e->getMessage(), "\n";
@@ -821,7 +821,7 @@ class UsersController extends AppController
                     if ($membershipTable->save($newMembership)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
@@ -860,7 +860,7 @@ class UsersController extends AppController
                     if ($membershipTable->save($currMem)) {
                         $email = new Email('default');
                         $email->transport();
-                        $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')

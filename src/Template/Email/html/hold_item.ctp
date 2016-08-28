@@ -13,7 +13,7 @@ The following items have been placed on hold:<br>
 
 <?php endforeach; ?>
 <br>
-These must be returned on of before <?php echo $return; ?><br><br>
+These must be borrowed on or before <?php echo $return; ?>, or the reserve will lapse.<br><br>
 
 Regards<br>
 EDV

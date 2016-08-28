@@ -154,7 +154,7 @@ class ReservesController extends AppController
 
                 $email->transport();
 
-                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user_email]) //change to $user_email after testing
                     ->template('reservedItemNotificationAvailable')
                     ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$reserved->item->title])

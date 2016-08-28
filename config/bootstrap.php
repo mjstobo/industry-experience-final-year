@@ -23,6 +23,11 @@ require __DIR__ . '/paths.php';
 // Use composer to load the autoloader.
 require ROOT . DS . 'vendor' . DS . 'autoload.php';
 
+if(!defined("PP_CONFIG_PATH")) {
+define("PP_CONFIG_PATH", __DIR__);
+}
+
+
 /**
  * Bootstrap CakePHP.
  *

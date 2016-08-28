@@ -702,12 +702,22 @@ class ItemsController extends AppController
 
             $email1 = new Email('default');
             $email1->transport();
-            $email1->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+            $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                 ->template('hold_item')
                 ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
-                ->to([$user_email])
+                ->to(['mjstobo@gmail.com'])
                 ->subject('EDV: Library Hold')
+                ->send();
+                
+          $email2 = new Email('default');
+            $email2->transport();
+            $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria']) 
+            	->template('admin_return_item')
+               ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
+                ->emailformat('html')
+                ->to(['mjstobo@gmail.com'])
+                ->subject('EDV: Item Reserved')
                 ->send();
 
     }
@@ -942,6 +952,15 @@ class ItemsController extends AppController
             $user_fname = $this->request->session()->read('Auth.User.given_name');
             $user_lname = $this->request->session()->read('Auth.User.family_name');
             $user_email = $this->request->session()->read('Auth.User.email_address');
+            $user_address = $this->request->session()->read('Auth.User.street_address');
+            $user_postcode = $this->request->session()->read('Auth.User.postcode');
+            $user_suburb = $this->request->session()->read('Auth.User.suburb');
+            $user_state = $this->request->session()->read('Auth.User.state_id');
+            $stateTable = TableRegistry::get('States');
+            $state = $stateTable->find()
+                        ->where(['id'=> $user_state])
+                        ->first();
+            $user_state = $state->state_name;
             $cart_items = TableRegistry::get('LoanItemCopies');
             $date = Time::today();
             $return = $date->addWeeks(2);
@@ -1002,10 +1021,12 @@ class ItemsController extends AppController
                 $index = $cart->first();
                 $index1 = $cart->skip(1)->first();
                 $index2 = $cart->skip(2)->first();
+                
+                $user_address = $user_address.' '.$user_suburb.' '.$user_postcode.' '.$user_state;
 
                 $email1 = new Email('default');
                 $email1->transport();
-                $email1->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->template('loan_item')
                     ->viewVars(['cart'=> $cart,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                     ->emailformat('html')
@@ -1013,6 +1034,15 @@ class ItemsController extends AppController
                     ->subject('EDV: Library Loan')
                     ->send();
 
+		$email2 = new Email('default');
+                $email2->transport();
+                $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                    ->template('admin_item_loan')
+                    ->viewVars(['cart'=> $cart,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return, 'user_address'=>$user_address])
+                    ->emailformat('html')
+                    ->to('reception@eatingdisorders.org.au')
+                    ->subject('EDV: Library Loan - postage required')
+                    ->send();
 
 
 
