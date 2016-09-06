@@ -706,17 +706,17 @@ class ItemsController extends AppController
                 ->template('hold_item')
                 ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
-                ->to(['mjstobo@gmail.com'])
+                ->to($user_email)
                 ->subject('EDV: Library Hold')
                 ->send();
-                
+
           $email2 = new Email('default');
             $email2->transport();
-            $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria']) 
+            $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
             	->template('admin_return_item')
                ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
-                ->to(['mjstobo@gmail.com'])
+                ->to(['reception@eatingdisorders.org.au'])
                 ->subject('EDV: Item Reserved')
                 ->send();
 
@@ -1021,7 +1021,7 @@ class ItemsController extends AppController
                 $index = $cart->first();
                 $index1 = $cart->skip(1)->first();
                 $index2 = $cart->skip(2)->first();
-                
+
                 $user_address = $user_address.' '.$user_suburb.' '.$user_postcode.' '.$user_state;
 
                 $email1 = new Email('default');

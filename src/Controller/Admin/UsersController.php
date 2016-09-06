@@ -483,8 +483,8 @@ class UsersController extends AppController
         $user = $this->Users->get($id, [
             'contain' => ['UserTypes', 'Salutations','Years', 'Memberships', 'ContactTypes', 'Organisations', 'Countries', 'Genders', 'States','Memberships.Status','Loans','Loans.ReturnStatuses','Settlements','Settlements.PaymentMethods','Settlements.PaymentTypes','Memberships.MemTypes']
         ]);
-        
-        
+
+
         $name = $user['family_name'].", ".$user['given_name'];
         $email = $user['email_address'];
 
@@ -624,7 +624,7 @@ class UsersController extends AppController
             $newpw = $this->Users->generateRandomString(10);
             $user->password = $newpw;
             $users->save($user);
-            $res = $email->from(['admin@eatingdisorders.org.au' => 'EDV Website'])
+            $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                 ->to([$useremail])
                 ->subject('Your new password to log in for EDV')
                 ->send('Your new password is for EDV is: ' . $newpw . ' Please log in here: http://members.eatingdisorders.org.au/users/login');

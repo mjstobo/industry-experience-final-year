@@ -5,7 +5,7 @@
 $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 
 // set document header information. This appears at the top of each page of the PDF document
-$pdf->SetHeaderData(PDF_HEADER_LOGO, 25, "Eating Disorders Victoria","\nLevel 2, Collingwood Football Club Community Centre,\nCnr Lulie and Abbot Street, Abbotsford, 3067 VIC, Australia \nPh: 1300 550 236 \t\t\t\t\t\t\t\t\t E: edv@eatingdisorders.org.au
+$pdf->SetHeaderData(PDF_HEADER_LOGO, 25, "Eating Disorders Victoria","\nLevel 2, Collingwood Football Club Community Centre,\nCnr Lulie and Abbot Street, Abbotsford, 3067 VIC, Australia \nPh: 1300 550 236 \t\t\t\t\t\t\t\t\t E: reception@eatingdisorders.org.au
 \nABN: 24010832192\nCharity Reg No: DGR 900224708");
 
 
