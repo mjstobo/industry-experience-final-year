@@ -17,3 +17,4 @@
 [19-Aug-2016 10:14:11 UTC] PHP Fatal error:  Call to a member function send() on a non-object in /home/eatingdi/public_html/members/src/Controller/ItemsController.php on line 721
 [19-Aug-2016 10:15:28 UTC] PHP Fatal error:  Call to a member function send() on a non-object in /home/eatingdi/public_html/members/src/Controller/ItemsController.php on line 721
 [19-Aug-2016 10:17:33 UTC] PHP Fatal error:  Call to a member function send() on a non-object in /home/eatingdi/public_html/members/src/Controller/ItemsController.php on line 719
+[06-Sep-2016 10:15:47 UTC] PHP Parse error:  syntax error, unexpected '===' (T_IS_IDENTICAL) in /home/eatingdi/public_html/members/config/app.php on line 330
