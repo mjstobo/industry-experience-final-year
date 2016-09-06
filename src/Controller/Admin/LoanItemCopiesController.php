@@ -195,7 +195,7 @@ public function returnItem()
 
                         $email = new Email('default');
 
-                        $email->transport();
+                        $email->transport('edv');
 
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user_email)//change to $user_email
@@ -207,7 +207,7 @@ public function returnItem()
 
                         $email = new Email('default');
 
-                        $email->transport();
+                        $email->transport('edv');
 
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to(['reception@eatingdisorders.org.au'])//change to edv email

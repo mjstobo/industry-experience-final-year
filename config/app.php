@@ -181,7 +181,7 @@ return [
 
 
     'EmailTransport' => [
-        'default' => [
+        'edv' => [
             'className' => 'Mail',
             // The following keys are used in SMTP transports
             'host' => 'mail.members.eatingdisorders.org.au',
@@ -194,7 +194,7 @@ return [
     ],
     'Email' => [
         'default' => [
-            'transport' => 'default',
+            'transport' => 'edv',
             'from' => 'reception@eatingdisorders.org.au',
             //'charset' => 'utf-8',
             //'headerCharset' => 'utf-8',

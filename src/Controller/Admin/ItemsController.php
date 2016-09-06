@@ -84,7 +84,7 @@ class ItemsController extends AppController
 
                     $email = new Email('default');
 
-                    $email->transport();
+                    $email->transport('edv');
 
                     $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->to($user_email)//change to $user_email
@@ -96,7 +96,7 @@ class ItemsController extends AppController
 
                     $email = new Email('default');
 
-                    $email->transport();
+                    $email->transport('edv');
 
                     $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->to(['ie.expo.team14@gmail.com'])//change to edv email

@@ -618,7 +618,7 @@ class UsersController extends AppController
         $this->set('user', $user);
         $useremail = $user->email_address;
         $email = new Email('default');
-        $email->transport();
+        $email->transport('edv');
 
         try {
             $newpw = $this->Users->generateRandomString(10);
@@ -820,7 +820,7 @@ class UsersController extends AppController
                 if (!$membershipStatus) {
                     if ($membershipTable->save($newMembership)) {
                         $email = new Email('default');
-                        $email->transport();
+                        $email->transport('edv');
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
@@ -859,7 +859,7 @@ class UsersController extends AppController
                 } else {
                     if ($membershipTable->save($currMem)) {
                         $email = new Email('default');
-                        $email->transport();
+                        $email->transport('edv');
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')

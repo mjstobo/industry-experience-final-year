@@ -441,7 +441,7 @@ var $helpers=array("Html","Form");
 
                         $email = new Email('default');
 
-                        $email->transport();
+                        $email->transport('edv');
 
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to(['ie.expo.team14@gmail.com'])
@@ -692,7 +692,7 @@ var $helpers=array("Html","Form");
 
                 if ($payments->save($newPayment)) {
                     $email = new Email('default');
-                    $email->transport();
+                    $email->transport('edv');
                     $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
                         ->to('ie.expo.team14@gmail.com')
                         ->subject('New Registered User')
@@ -964,7 +964,7 @@ var $helpers=array("Html","Form");
                     if ($this->Users->save($user)) {
                         $email = new Email('default');
 
-                        $email->transport();
+                        $email->transport('edv');
 
                         try {
                             $res = $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
@@ -998,7 +998,7 @@ var $helpers=array("Html","Form");
             $subject = $this->request->data('subject');
             $email1 = $this->request->data('email');
             $email = new Email('default');
-            $email->transport();
+            $email->transport('edv');
             $email->from([$email1 => 'EDV Enquiry'])
                 ->to('ie.expo.team14@gmail.com')
                 ->subject($subject)
