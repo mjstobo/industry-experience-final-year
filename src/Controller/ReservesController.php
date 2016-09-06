@@ -152,7 +152,7 @@ class ReservesController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user_email]) //change to $user_email after testing

@@ -48,7 +48,7 @@ class CronsController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user->user['email_address'] => $user->user['given_name']])
@@ -91,7 +91,7 @@ class CronsController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user->user['email_address'] => $user->user['given_name']])
@@ -125,7 +125,7 @@ class CronsController extends AppController
         foreach ($loan as $check) {
             $email = new Email('default');
 
-            $email->transport('edv');
+            $email->transport();
 
             try {
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
@@ -244,7 +244,7 @@ class CronsController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                   //  ->to($user_email) //edvs email goes here

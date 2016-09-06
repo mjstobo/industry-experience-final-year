@@ -24,4 +24,5 @@ return array(
     'Aura\\Intl\\_Config\\' => array($vendorDir . '/aura/intl/config'),
     'App\\Test\\' => array($baseDir . '/tests'),
     'App\\' => array($baseDir . '/src'),
+    'Ajax\\' => array($vendorDir . '/dereuromark/cakephp-ajax/src'),
 );

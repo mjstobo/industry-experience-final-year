@@ -441,7 +441,7 @@ var $helpers=array("Html","Form");
 
                         $email = new Email('default');
 
-                        $email->transport('edv');
+                        $email->transport();
 
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user_email)
@@ -692,21 +692,9 @@ var $helpers=array("Html","Form");
 
                 if ($payments->save($newPayment)) {
                     $email = new Email('default');
-<<<<<<< HEAD
                     $email->transport();
                     $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                         ->to('reception@eatingdisorders.org.au')
-=======
-<<<<<<< HEAD
-                    $email->transport('edv');
-                    $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
-                        ->to('ie.expo.team14@gmail.com')
-=======
-                    $email->transport();
-                    $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
-                        ->to('reception@eatingdisorders.org.au')
->>>>>>> a6e7068946bc41df1856850a5a0dfa61bac56396
->>>>>>> 90fff64733d980243ace24eb2cdc6856530d45d4
                         ->subject('New Registered User')
                         ->send('A new user has been registered to EDV.
 
@@ -976,7 +964,7 @@ var $helpers=array("Html","Form");
                     if ($this->Users->save($user)) {
                         $email = new Email('default');
 
-                        $email->transport('edv');
+                        $email->transport();
 
                         try {
                             $res = $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
@@ -1010,7 +998,7 @@ var $helpers=array("Html","Form");
             $subject = $this->request->data('subject');
             $email1 = $this->request->data('email');
             $email = new Email('default');
-            $email->transport('edv');
+            $email->transport();
             $email->from([$email1 => 'EDV Enquiry'])
                 ->to('reception@eatingdisorders.org.au')
                 ->subject($subject)

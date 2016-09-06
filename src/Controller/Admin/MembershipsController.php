@@ -55,7 +55,7 @@ class MembershipsController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 try {
                     $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
@@ -95,7 +95,7 @@ class MembershipsController extends AppController
 
                 $email = new Email('default');
 
-                $email->transport('edv');
+                $email->transport();
 
                 try {
                     $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
