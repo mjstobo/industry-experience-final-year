@@ -444,8 +444,8 @@ var $helpers=array("Html","Form");
                         $email->transport('edv');
 
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
-                            ->to(['ie.expo.team14@gmail.com'])
-                            ->subject($user_email)
+                            ->to($user_email)
+                            ->subject('Membership Renewal')
                             ->send('Dear '.$salutation.' '.$user_fname.' '.$user_lname.','."\n"."\n"."\n".
                                 'You have renewed your membership for '.$duration_name.'.'."\n"."\n"
                                 .'Membership: '.$description."\n".'Effective from: '.$join."\n".'Expires on: '.$expiry."\n\n".'Amount Paid: $'.$price );
@@ -692,9 +692,15 @@ var $helpers=array("Html","Form");
 
                 if ($payments->save($newPayment)) {
                     $email = new Email('default');
+<<<<<<< HEAD
                     $email->transport('edv');
                     $email->from(['ie.onefourtech@gmail.com' => 'EDV Website'])
                         ->to('ie.expo.team14@gmail.com')
+=======
+                    $email->transport();
+                    $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
+                        ->to('reception@eatingdisorders.org.au')
+>>>>>>> a6e7068946bc41df1856850a5a0dfa61bac56396
                         ->subject('New Registered User')
                         ->send('A new user has been registered to EDV.
 
@@ -720,7 +726,7 @@ var $helpers=array("Html","Form");
                         ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user->email_address,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
                         ->to([$user_email])
-                        ->subject('Thank you for joining EDV')
+                        ->subject('Welcome to Eating Disorders Victoria')
                         ->send();
 
                     if ($user->newsletter) {
@@ -1000,7 +1006,7 @@ var $helpers=array("Html","Form");
             $email = new Email('default');
             $email->transport('edv');
             $email->from([$email1 => 'EDV Enquiry'])
-                ->to('ie.expo.team14@gmail.com')
+                ->to('reception@eatingdisorders.org.au')
                 ->subject($subject)
                 ->send('A new enquiry has been received.' . "\n\n" . 'Name: ' . $name . "\n" . 'Subject: ' . $subject . "\n" .  'Email: ' . $email1 . "\n\n" . 'Message: ' . $message . '');
             if($email->send()){
