@@ -61,8 +61,9 @@ class MembershipsController extends AppController
                     $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                         ->to([$user->user['email_address'] => $user->user['given_name']])
                         ->subject('Membership Expiry Reminder')
-                        ->send('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"
-                            . 'Just a quick reminder to let you know that your membership will expire on ' . $now);
+                        ->message('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"
+                            . 'Just a quick reminder to let you know that your membership will expire on ' . $now)
+                        ->send();
                 } catch (Exception $e) {
 
                     echo 'Exception : ', $e->getMessage(), "\n";
@@ -101,8 +102,9 @@ class MembershipsController extends AppController
                     $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                         ->to([$user->user['email_address'] => $user->user['given_name']])
                         ->subject('Membership Expired')
-                        ->send('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"
-                            . 'Just a quick reminder to let you know that your membership has now expired as of ' . $now);
+                        ->message('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"
+                            . 'Just a quick reminder to let you know that your membership has now expired as of ' . $now)
+                        ->send();
                 } catch (Exception $e) {
 
                     echo 'Exception : ', $e->getMessage(), "\n";

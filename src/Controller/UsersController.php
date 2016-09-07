@@ -446,9 +446,10 @@ var $helpers=array("Html","Form");
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user_email)
                             ->subject('Membership Renewal')
-                            ->send('Dear '.$salutation.' '.$user_fname.' '.$user_lname.','."\n"."\n"."\n".
+                            ->message('Dear '.$salutation.' '.$user_fname.' '.$user_lname.','."\n"."\n"."\n".
                                 'You have renewed your membership for '.$duration_name.'.'."\n"."\n"
-                                .'Membership: '.$description."\n".'Effective from: '.$join."\n".'Expires on: '.$expiry."\n\n".'Amount Paid: $'.$price );
+                                .'Membership: '.$description."\n".'Effective from: '.$join."\n".'Expires on: '.$expiry."\n\n".'Amount Paid: $'.$price )
+                            ->send();
 
 
 
@@ -696,11 +697,12 @@ var $helpers=array("Html","Form");
                     $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                         ->to('reception@eatingdisorders.org.au')
                         ->subject('New Registered User')
-                        ->send('A new user has been registered to EDV.
+                        ->message('A new user has been registered to EDV.
 
                                 Name: ' . $user->given_name . ' ' . $user->family_name . '
                                 User ID: ' . $user->id . '
-                                Email: ' . $user->email_address . '');
+                                Email: ' . $user->email_address . '')
+                        ->send();
 
 
                     $this->Flash->success('Your registration has been successful');

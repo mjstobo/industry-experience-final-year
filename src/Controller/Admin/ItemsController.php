@@ -94,15 +94,16 @@ class ItemsController extends AppController
                         ->subject('Item Reservation')
                         ->send();
 
-                    $email = new Email('default');
+                    $email1 = new Email('default');
 
-                    $email->transport();
+                    $email1->transport();
 
-                    $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
-                        ->to(['reception@eatingdisorders.org.au'])//change to edv email
+                    $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                        ->to('mjstobo@gmail.com')//change to edv email
                         ->subject('Item Reservation')
-                        ->send('Dear EDV, ' . "\n \n" . 'The following user has a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .
-                            $user_fname . ' ' . $user_lname . 'Phone: ' . $user_phone . "\n" . 'Email: ' . $user_email . "\n \n" . 'The requested copy' . "\n" . 'Barcode: ' . $reserve->item->item_copies[0]->barcode . "\n" . 'Title: ' . $reserve->item->title);
+                        ->message('Dear EDV, ' . "\n \n" . 'The following user has a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .
+                            $user_fname . ' ' . $user_lname . 'Phone: ' . $user_phone . "\n" . 'Email: ' . $user_email . "\n \n" . 'The requested copy' . "\n" . 'Barcode: ' . $reserve->item->item_copies[0]->barcode . "\n" . 'Title: ' . $reserve->item->title)
+                        ->send();
 
                     $loanitemcopies->copy_returned =1;
                     $loanitemcopies->date_returned = $time;

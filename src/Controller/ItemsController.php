@@ -716,7 +716,7 @@ class ItemsController extends AppController
             	->template('admin_return_item')
                ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
-                ->to(['reception@eatingdisorders.org.au'])
+                ->to('reception@eatingdisorders.org.au')
                 ->subject('EDV: Item Reserved')
                 ->send();
 

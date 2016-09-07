@@ -825,9 +825,10 @@ class UsersController extends AppController
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
-                            ->send('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
+                            ->message('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
                                 'Your Membership has been renewed for ' . $query->duration->duration_name . '.' . "\n" . "\n"
-                                . 'Membership: ' . $query->description . "\n" . 'Effective from: ' . $join_date . "\n" . 'Expires on: ' . $expiry_date . "\n\n" . 'Amount Paid: $' . $price);
+                                . 'Membership: ' . $query->description . "\n" . 'Effective from: ' . $join_date . "\n" . 'Expires on: ' . $expiry_date . "\n\n" . 'Amount Paid: $' . $price)
+                            ->send();
 
                         $this->set('query', $query);
                         $this->Flash->success('The Membership has been renewed');
@@ -864,9 +865,10 @@ class UsersController extends AppController
                             ->to($user[0]->email_address)
                             //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
-                            ->send('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
+                            ->message('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
                                 'Your Membership has been renewed for ' . $query->duration->duration_name . '.' . "\n" . "\n"
-                                . 'Membership: ' . $query->description . "\n" . 'Effective from: ' . $join_date . "\n" . 'Expires on: ' . $expiry_date . "\n\n" . 'Amount Paid: $' . $price);
+                                . 'Membership: ' . $query->description . "\n" . 'Effective from: ' . $join_date . "\n" . 'Expires on: ' . $expiry_date . "\n\n" . 'Amount Paid: $' . $price)
+                            ->send();
 
                         $this->set('query', $query);
                         $this->Flash->success('The Membership has been renewed');
