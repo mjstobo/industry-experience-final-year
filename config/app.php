@@ -182,14 +182,14 @@ return [
 
     'EmailTransport' => [
         'default' => [
-            'className' => 'Mail',
+            'className' => 'Smtp',
             // The following keys are used in SMTP transports
-            'host' => 'mail.members.eatingdisorders.org.au',
-           'port' => 587,
+            'host' => 'mel-s24e.hosting-service.net.au',
+           'port' => 465,
             'timeout' => 30,
             'username' => 'admin@members.eatingdisorders.org.au',
             'password' => 'yrarb1l',
-            'tls' => false,
+            'tls' => true,
         ],
     ],
     'Email' => [
