@@ -58,7 +58,7 @@ class MembershipsController extends AppController
                 $email->transport();
 
                 try {
-                    $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
+                    $res = $email->from(['mjstobo@gmail.com' => 'EDV Website'])
                         ->to([$user->user['email_address'] => $user->user['given_name']])
                         ->subject('Membership Expiry Reminder')
                         ->message('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"
@@ -99,7 +99,7 @@ class MembershipsController extends AppController
                 $email->transport();
 
                 try {
-                    $res = $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
+                    $res = $email->from(['mjstobo@gmail.com' => 'EDV Website'])
                         ->to([$user->user['email_address'] => $user->user['given_name']])
                         ->subject('Membership Expired')
                         ->message('Dear' . ' ' . $user->user->salutation['salutation_name'] . ' ' . $user->user['given_name'] . ' ' . $user->user['family_name'] . ',' . "\n"

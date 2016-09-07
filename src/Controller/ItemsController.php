@@ -716,7 +716,7 @@ class ItemsController extends AppController
             	->template('admin_return_item')
                ->viewVars(['cart'=> $cart_item,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return])
                 ->emailformat('html')
-                ->to('reception@eatingdisorders.org.au')
+                ->to('mjstobo@gmail.com')
                 ->subject('EDV: Item Reserved')
                 ->send();
 
@@ -1040,7 +1040,7 @@ class ItemsController extends AppController
                     ->template('admin_item_loan')
                     ->viewVars(['cart'=> $cart,'fname'=>$user_fname,'lname'=>$user_lname,'today'=>$date,'return'=>$return, 'user_address'=>$user_address])
                     ->emailformat('html')
-                    ->to('reception@eatingdisorders.org.au')
+                    ->to('mjstobo@gmail.com')
                     ->subject('EDV: Library Loan - postage required')
                     ->send();
 
