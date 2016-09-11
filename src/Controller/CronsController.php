@@ -248,7 +248,7 @@ class CronsController extends AppController
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                   //  ->to($user_email) //edvs email goes here
-                    ->to('mjstobo@gmail.com')
+                    ->to('reception@eatingdisorders.org.au')
                     ->template('adminReturnItem')
                     ->viewVars(['fname'=> $reservation->user->given_name, 'lname'=>$reservation->user->family_name, 'title'=>$reservation->item->title, 'barcode'=>$reservation->item->item_copies[0]->barcode])
                     ->emailformat('html')
@@ -257,7 +257,7 @@ class CronsController extends AppController
 
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     //  ->to($user_email) //edvs email goes here
-                    ->to('mjstobo@gmail.com')
+                    ->to('reception@eatingdisorders.org.au')
                     ->template('reserve_expiry')
                     ->viewVars(['fname'=> $reservation->user->given_name, 'lname'=>$reservation->user->family_name, 'title'=>$reservation->item->title, 'barcode'=>$reservation->item->item_copies[0]->barcode])
                     ->emailformat('html')

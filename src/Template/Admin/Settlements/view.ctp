@@ -15,7 +15,7 @@
                                                 <strong>Eating Disorders Victoria</strong>
                                                 <br>Level 2, Collingwood Football Club Community Centre
                                                 <br>Cnr Lulie and Abbot Street, Abbotsford, 3067 VIC, Australia
-                                                <br>Ph: 1300 550 236  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp E: mjstobo@gmail.com
+                                                <br>Ph: 1300 550 236  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp E: reception@eatingdisorders.org.au
                                                 <br>
                                                 <br>ABN:24010832192
                                                 <br> Charity Reg No: DGR 900224708

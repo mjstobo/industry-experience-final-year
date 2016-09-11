@@ -694,8 +694,8 @@ var $helpers=array("Html","Form");
                 if ($payments->save($newPayment)) {
                     $email = new Email('default');
                     $email->transport();
-                    $email->from(['mjstobo@gmail.com' => 'EDV Website'])
-                        ->to('mjstobo@gmail.com')
+                    $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
+                        ->to('reception@eatingdisorders.org.au')
                         ->subject('New Registered User')
                         ->message('A new user has been registered to EDV.
 
@@ -1002,7 +1002,7 @@ var $helpers=array("Html","Form");
             $email = new Email('default');
             $email->transport();
             $email->from([$email1 => 'EDV Enquiry'])
-                ->to('mjstobo@gmail.com')
+                ->to('reception@eatingdisorders.org.au')
                 ->subject($subject)
                 ->send('A new enquiry has been received.' . "\n\n" . 'Name: ' . $name . "\n" . 'Subject: ' . $subject . "\n" .  'Email: ' . $email1 . "\n\n" . 'Message: ' . $message . '');
             if($email->send()){
