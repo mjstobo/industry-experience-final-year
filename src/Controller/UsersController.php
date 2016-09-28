@@ -389,11 +389,11 @@ var $helpers=array("Html","Form");
                             $payment = Payment::get($paymentId, $apiContext);
                         } catch (Exception $ex) {
                             $this->Flash->error('There was an error processing your payment.');
-                            exit(1);
+                            exit(0);
                         }
                     } catch (Exception $ex) {
                         $this->Flash->error('There was an error processing your payment.');
-                        exit(1);
+                        exit(0);
                     }
 
                     $payment_details = $this->request->session()->read('payment');
@@ -675,13 +675,12 @@ var $helpers=array("Html","Form");
                         $payment = Payment::get($paymentId, $apiContext);
                     } catch (Exception $ex) {
                         $this->Flash->error('There was an error processing your payment.');
-                        exit(1);
+                        exit(0);
                     }
                 } catch (Exception $ex) {
                     $this->Flash->error('There was an error processing your payment.');
-                    exit(1);
+                    exit(0);
                 }
-                echo $payment;
 
 
                 $payment_details = $this->request->session()->read('payment');
@@ -698,7 +697,6 @@ var $helpers=array("Html","Form");
                         ->to('reception@eatingdisorders.org.au')
                         ->subject('New Registered User')
                         ->message('A new user has been registered to EDV.
-
                                 Name: ' . $user->given_name . ' ' . $user->family_name . '
                                 User ID: ' . $user->id . '
                                 Email: ' . $user->email_address . '')
