@@ -3,7 +3,7 @@
 <body>
 
 
-Dear <?= $fname.' '.$lname ?>,<br><br>
+Dear <?= $fname." ".$lname ?>,<br><br>
 
 Thank you for becoming a member of Eating Disorders Victoria and welcome to our growing ranks of supporters.<br><br>
 

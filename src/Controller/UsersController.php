@@ -698,6 +698,8 @@ var $helpers=array("Html","Form");
 
                     $user = $this->request->session()->read('Auth.User');
                     $user_id = $this->request->session()->read('Auth.User.id');
+                    $user_fname = $this->request->session()->read('Auth.User.family_name');
+                    $user_given_name = $this->request->session()->read('Auth.User.given_name');
                     $user_email = $this->request->session()->read('Auth.User.email_address');
                     $memberships->user_id = $user_id;
                     $membershipTable->save($memberships);
@@ -707,7 +709,7 @@ var $helpers=array("Html","Form");
                     $email2->transport();
                     $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->template('registration')
-                        ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
+                        ->viewVars(['fname'=>$user_given_name, 'lname'=>$user_fname, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
                         ->to([$user_email])
                         ->subject('Welcome to Eating Disorders Victoria')

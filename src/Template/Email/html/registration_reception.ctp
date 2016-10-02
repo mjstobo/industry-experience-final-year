@@ -2,7 +2,7 @@
 
 <body>
 
-The following member has joined the EDV site: <?= $fname.' '.$lname ?>,<br><br>
+The following member has joined the EDV site: <?= $fname ." ". $lname ?>,<br><br>
 
 Username is <b><?= $email ?></b><br>
 Membership number is <b><?= $memID ?></b><br>
