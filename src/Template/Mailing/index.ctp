@@ -14,20 +14,4 @@
         }
 
         ?></p>
-
-    <h4> Test List #2</h4>
-    <p>Status: <?php echo $secondList;?> <p> <?php
-        if($secondBool){
-            echo $this->Html->link(
-                'Unsubscribe',
-                ['controller' => 'mailing', 'action' => 'unsubscribe','listid' => 'secondlist', '_full' => true]);
-        } else if(!$secondBool){
-            echo $this->Html->link(
-                'Subscribe',
-                ['controller' => 'mailing', 'action' => 'subscribe','listid' => 'secondlist', '_full' => true]);
-        }
-        ?>
-       </p>
 </div>
-
-
