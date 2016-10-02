@@ -52,20 +52,16 @@ class MailingController extends AppController
         $auth = array('api_key' => $cmKey->key);
         $wrap1 = new CS_REST_Subscribers($listKey->key, $auth);
 
-        // List Key for 'secondList'
-        $wrap2 = new CS_REST_Subscribers('67492256d5aa73b67a50ec079a9248da', $auth);
-
         // Check subscription status of session user
-        $userEmail = $this->request->session()->read('Auth.User.email_address');
+        $userEmail = $user['email_address'];
         $checkFirst = $wrap1->get($userEmail);
-        $checkSecond = $wrap2->get($userEmail);
-        $firstResponseArray = get_object_vars($checkFirst->response);
-        $secondResponseArray = get_object_vars($checkSecond->response);
 
+        $firstResponseArray = get_object_vars($checkFirst->response);
 
         if ($this->request->is('get')) {
-          //  echo "Result of GET /api/v3.1/subscribers/{list id}.{format}?email={email}\n<br />";
+           // echo "Result of GET /api/v3.1/subscribers/{list id}.{format}?email={email}\n<br />";
             if ($checkFirst->was_successful()) {
+
                 $responseState = $firstResponseArray['State'];
                 if($responseState == 'Active') {
                     $this->set('firstList', "Subscribed");
@@ -75,21 +71,11 @@ class MailingController extends AppController
                     $this->set('firstBool', false);
                 }
             } else {
-                //  echo 'Failed with code ' . $checkSub->http_status_code . "\n<br /><pre>";
+                 // echo 'Failed with code ' . $checkSub->http_status_code . "\n<br /><pre>";
+                //debug($checkFirst->response);
                 $responseMessage = $firstResponseArray['Message'];
-                $this->set('firstList', $responseMessage);
+                $this->set('firstList', "Unsubscribed");
                 $this->set('firstBool', false);
-            }
-            if ($checkSecond->was_successful()) {
-                // debug($checkSub->response);
-                $responseState = $secondResponseArray['State'];
-                $this->set('secondList', "Subscribed");
-                $this->set('secondBool', true);
-            } else {
-                //  echo 'Failed with code ' . $checkSub->http_status_code . "\n<br /><pre>";
-                $responseMessage = $secondResponseArray['Message'];
-                $this->set('secondList', "Unsubscribed");
-                $this->set('secondBool', false);
             }
         }
 
