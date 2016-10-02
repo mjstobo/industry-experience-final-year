@@ -108,24 +108,24 @@ class MailingController extends AppController
     {
         $this->loadComponent('RequestHandler');
 
-        $auth = array('api_key' => '004ca9ece1d83e87c08023ecd30627c4e116ed5096728b05');
-        if($this->request->query['listid'] == 'firstlist'){
-            $wrap = new CS_REST_Subscribers('70e1d6cbed8b2d4e1d075fc9b230a989', $auth);
-        } else if($this->request->query['listid'] == 'secondlist'){
-            $wrap = new CS_REST_Subscribers('67492256d5aa73b67a50ec079a9248da', $auth);
-        }
+        $apiTable = TableRegistry::get('ApiKeys');
+        $cmKey = $apiTable->find()
+        ->where(['id' => 3])
+        ->first();
+        $listKey = $apiTable->find()
+        ->where(['id' => 4])
+        ->first();
+        $auth = array('api_key' => $cmKey->key);
+        $wrap = new CS_REST_Subscribers($listKey->key, $auth);
 
         $userEmail = $this->request->session()->read('Auth.User.email_address');
         $result = $wrap->unsubscribe($userEmail);
 
        // echo "Result of GET /api/v3.1/subscribers/{list id}/unsubscribe.{format}\n<br />";
         if ($result->was_successful()) {
-            echo "Unsubscribed with code " . $result->http_status_code;
+              $this->Flash->success(__('Successfully Unsubscribed'));
         } else {
-            echo 'Failed with code ' . $result->http_status_code . "\n<br /><pre>";
-            var_dump($result->response);
-            echo '</pre>';
-
+              $this->Flash->error(__('Failed to unsubscribe. Please contact EDV.'));
         }
     }
 
@@ -135,12 +135,15 @@ class MailingController extends AppController
         $name = $this->request->session()->read('Auth.User.family_name').", ".$this->request->session()->read('Auth.User.given_name');
         $email = $this->request->session()->read('Auth.User.email_address');
 
-        $auth = array('api_key' => '004ca9ece1d83e87c08023ecd30627c4e116ed5096728b05');
-        if($this->request->query['listid'] == 'firstlist'){
-            $wrap = new CS_REST_Subscribers('70e1d6cbed8b2d4e1d075fc9b230a989', $auth);
-        } else if($this->request->query['listid'] == 'secondlist'){
-            $wrap = new CS_REST_Subscribers('67492256d5aa73b67a50ec079a9248da', $auth);
-        }
+        $apiTable = TableRegistry::get('ApiKeys');
+        $cmKey = $apiTable->find()
+        ->where(['id' => 3])
+        ->first();
+        $listKey = $apiTable->find()
+        ->where(['id' => 4])
+        ->first();
+        $auth = array('api_key' => $cmKey->key);
+        $wrap = new CS_REST_Subscribers($listKey->key, $auth);
 
         $result = $wrap->add(array(
             'EmailAddress' => $email,
@@ -150,9 +153,9 @@ class MailingController extends AppController
 
          //echo "Result of POST /api/v3.1/subscribers/{list id}.{format}\n<br />";
         if ($result->was_successful()) {
-            $this->Flash->success('Subscribed!');
+            $this->Flash->success('Subscribed successfully.');
         } else {
-            $this->Flash->error('Did not work!');
+            $this->Flash->error(__('Failed to subscribe. Please contact EDV.'));
         }
 
 
