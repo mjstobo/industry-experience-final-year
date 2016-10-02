@@ -123,22 +123,15 @@ class CronsController extends AppController
 
 
         foreach ($loan as $check) {
-
-          $loansTable = TableRegistry::get('Loans');
-          $onLoan = $loansTable->find()
-            ->contain('Users', 'ReturnStatuses', 'ItemCopies','ItemCopies.Items','ItemCopies.Items.Authors','ItemCopies.Items.Subjects','ItemCopies.ItemStatuses','ItemCopies.Items.Publishers')
-            ->where(['id' => $check->id])
-            ->all();
             $email = new Email('default');
 
             $email->transport();
 
             try {
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
-                    //->to([$check->user['email_address'] => $check->user['given_name']])
-                    ->to(['mjstobo@gmail.com'])
+                    ->to([$check->user['email_address'] => $check->user['given_name']])
                     ->template('overdueNotice')
-                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date'], 'loan' =>$onLoan])
+                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date']])
                     ->emailformat('html')
                     ->subject('EDV Overdue Notice')
                     ->send();
