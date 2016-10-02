@@ -691,17 +691,6 @@ var $helpers=array("Html","Form");
                 $newPayment->user_id = $user->id;
 
                 if ($payments->save($newPayment)) {
-                    $email = new Email('default');
-                    $email->transport();
-                    $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
-                        ->to('reception@eatingdisorders.org.au')
-                        ->subject('New Registered User')
-                        ->message('A new user has been registered to EDV.
-                                Name: ' . $user->given_name . ' ' . $user->family_name . '
-                                User ID: ' . $user->id . '
-                                Email: ' . $user->email_address . '')
-                        ->send();
-
 
                     $this->Flash->success('Your registration has been successful');
 
@@ -713,9 +702,9 @@ var $helpers=array("Html","Form");
                     $membershipTable->save($memberships);
 
 
-                    $email1 = new Email('default');
-                    $email1->transport();
-                    $email1->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                    $email2 = new Email('default');
+                    $email2->transport();
+                    $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->template('registration')
                         ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user->email_address,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
@@ -723,6 +712,17 @@ var $helpers=array("Html","Form");
                         ->subject('Welcome to Eating Disorders Victoria')
                         ->send();
 
+
+                        $email = new Email('default');
+                        $email->transport();
+                        $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
+                            ->to('reception@eatingdisorders.org.au')
+                            ->subject('New Registered User')
+                            ->message('A new user has been registered to EDV.
+                                    Name: ' . $user->given_name . ' ' . $user->family_name . '
+                                    User ID: ' . $user->id . '
+                                    Email: ' . $user->email_address . '')
+                            ->send();
                     if ($user->newsletter) {
                         //Authenticate via API key for 'Test List'
                         $apiTable = TableRegistry::get('ApiKeys');
