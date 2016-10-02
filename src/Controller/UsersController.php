@@ -740,7 +740,7 @@ var $helpers=array("Html","Form");
 
                         $result = $wrap->add(array(
                             'Email address' => $user->email_address,
-                            'Name' => $user->given_name . ' ' . $user->family_name,
+                            'Name' => $user_given_name . " " . $user_fname,
                             'Member' => true,
                             'Resubscribe' => true
                         ));
