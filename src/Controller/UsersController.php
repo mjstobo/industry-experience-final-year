@@ -696,6 +696,7 @@ var $helpers=array("Html","Form");
 
                     $this->Auth->setUser($user->toArray());
 
+                    $user = $this->request->session()->read('Auth.User');
                     $user_id = $this->request->session()->read('Auth.User.id');
                     $user_email = $this->request->session()->read('Auth.User.email_address');
                     $memberships->user_id = $user_id;
