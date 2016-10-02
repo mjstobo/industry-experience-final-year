@@ -1,7 +1,7 @@
 <h3><?php echo ('Mailing List Subscriptions'); ?> </h3>
 <div>
 
-    <h4> Test List #1</h4>
+    <h4> Mailing List</h4>
     <p>Status: <?php echo $firstList; ?> <p> <?php
         if($firstBool){
             echo $this->Html->link(

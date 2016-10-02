@@ -53,6 +53,9 @@ class MailingController extends AppController
         $wrap1 = new CS_REST_Subscribers($listKey->key, $auth);
 
         // Check subscription status of session user
+
+
+        $user = $this->request->session()->read('Auth.User');
         $userEmail = $user['email_address'];
         $checkFirst = $wrap1->get($userEmail);
 
