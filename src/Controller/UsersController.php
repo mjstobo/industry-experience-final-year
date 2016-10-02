@@ -721,7 +721,7 @@ var $helpers=array("Html","Form");
                         $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                             ->to('reception@eatingdisorders.org.au')
                             ->template('registration_reception')
-                            ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
+                            ->viewVars(['fname'=>$user_given_name, 'lname'=>$user_fname, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                             ->emailformat('html')
                             ->subject('A New Member has registered')
                             ->send();
