@@ -78,6 +78,7 @@ class ItemsController extends AppController
                     $user_id = $reserve->user_id;
                     $user_email = $reserve->user->email_address;
                     $user_phone = $reserve->user->phone_number;
+                    $title = $reserve->item->title;
 
                     $email_date = $expire->i18nFormat('d MMMM, YYY');
 
@@ -89,7 +90,7 @@ class ItemsController extends AppController
                     $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->to($user_email)//change to $user_email
                         ->template('reservedItemNotificationReturn')
-                        ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$reserve->item->title])
+                        ->viewVars(['fname'=> $user_fname, 'lname'=>$user_lname, 'title'=>$title])
                         ->emailformat('html')
                         ->subject('Item Reservation')
                         ->send();
@@ -102,7 +103,7 @@ class ItemsController extends AppController
                         ->to('mjstobo@gmail.com')//change to edv email
                         ->subject('Item Reservation')
                         ->message('Dear EDV, ' . "\n \n" . 'The following user has a reserve on an item, please put the item on the side.' . "\n \n" . 'User ID: ' . $user_id . "\n" . 'Name: ' . $user_salutation .
-                            $user_fname . ' ' . $user_lname . 'Phone: ' . $user_phone . "\n" . 'Email: ' . $user_email . "\n \n" . 'The requested copy' . "\n" . 'Barcode: ' . $reserve->item->item_copies[0]->barcode . "\n" . 'Title: ' . $reserve->item->title)
+                            $user_fname . ' ' . $user_lname . 'Phone: ' . $user_phone . "\n" . 'Email: ' . $user_email . "\n \n" . 'The requested copy' . "\n" . 'Barcode: ' . $reserve->item->item_copies[0]->barcode . "\n" . 'Title: '. $title)
                         ->send();
 
                     $loanitemcopies->copy_returned =1;
