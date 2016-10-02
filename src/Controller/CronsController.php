@@ -112,7 +112,7 @@ class CronsController extends AppController
 {
     $loans = TableRegistry::get('Loans');
     $loan = $loans->find()
-        ->contain('Users','ReturnStatuses','Users.Salutations')
+        ->contain('Users','ReturnStatuses','Users.Salutations', 'Items')
         ->where(['return_status_id'=>4])
         ->all();
     $results = $loan->isEmpty();
@@ -129,10 +129,10 @@ class CronsController extends AppController
 
             try {
                 $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
-                    ->to([$check->user['email_address'] => $check->user['given_name']])
-                    //->to(['ie.expo.team14@gmail.com'])
+                    //->to([$check->user['email_address'] => $check->user['given_name']])
+                    ->to(['mjstobo@gmail.com'])
                     ->template('overdueNotice')
-                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date']])
+                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date'], 'loan' =>$check])
                     ->emailformat('html')
                     ->subject('EDV Overdue Notice')
                     ->send();
@@ -339,4 +339,3 @@ class CronsController extends AppController
         }
     }
 }
-
