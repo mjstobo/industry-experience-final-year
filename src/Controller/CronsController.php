@@ -124,7 +124,7 @@ class CronsController extends AppController
 
         foreach ($loan as $check) {
 
-          $loan = $this->Loans->get($check->id, [
+          $onLoan = $this->Loans->get($check->id, [
               'contain' => ['Users', 'ReturnStatuses', 'ItemCopies','ItemCopies.Items','ItemCopies.Items.Authors','ItemCopies.Items.Subjects','ItemCopies.ItemStatuses','ItemCopies.Items.Publishers']
           ]);
             $email = new Email('default');
@@ -136,7 +136,7 @@ class CronsController extends AppController
                     //->to([$check->user['email_address'] => $check->user['given_name']])
                     ->to(['mjstobo@gmail.com'])
                     ->template('overdueNotice')
-                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date'], 'loan' =>$loan])
+                    ->viewVars(['fname'=> $check->user['given_name'], 'lname'=>$check->user['family_name'], 'date'=>$check['return_date'], 'loan' =>$onLoan])
                     ->emailformat('html')
                     ->subject('EDV Overdue Notice')
                     ->send();
