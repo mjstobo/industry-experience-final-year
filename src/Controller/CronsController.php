@@ -124,9 +124,11 @@ class CronsController extends AppController
 
         foreach ($loan as $check) {
 
-          $onLoan = $this->Loans->get($check->id, [
-              'contain' => ['Users', 'ReturnStatuses', 'ItemCopies','ItemCopies.Items','ItemCopies.Items.Authors','ItemCopies.Items.Subjects','ItemCopies.ItemStatuses','ItemCopies.Items.Publishers']
-          ]);
+          $loansTable = TableRegistry::get('Loans');
+          $onLoan = $loansTable->find()
+            ->contain('Users', 'ReturnStatuses', 'ItemCopies','ItemCopies.Items','ItemCopies.Items.Authors','ItemCopies.Items.Subjects','ItemCopies.ItemStatuses','ItemCopies.Items.Publishers')
+            ->where(['id' => $check->id])
+            ->all();
             $email = new Email('default');
 
             $email->transport();
