@@ -112,7 +112,7 @@ class CronsController extends AppController
 {
     $loans = TableRegistry::get('Loans');
     $loan = $loans->find()
-        ->contain('Users','ReturnStatuses','Users.Salutations', 'LoanItems', 'Items')
+        ->contain('Users','ReturnStatuses','Users.Salutations', 'LoanItemCopies', 'LoanItemCopies.ItemCopies.Items')
         ->where(['return_status_id'=>4])
         ->all();
     $results = $loan->isEmpty();
