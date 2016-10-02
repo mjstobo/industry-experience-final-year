@@ -72,6 +72,9 @@ class MailingController extends AppController
                 } else if($responseState == 'Unsubscribed'){
                     $this->set('firstList', "Unsubscribed");
                     $this->set('firstBool', false);
+                  } else if($responseState == 'Unconfirmed'){
+                      $this->set('firstList', "Unconfirmed");
+                      $this->set('firstBool', true);
                 }
             } else {
                  // echo 'Failed with code ' . $checkSub->http_status_code . "\n<br /><pre>";
