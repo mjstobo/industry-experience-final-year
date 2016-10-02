@@ -707,7 +707,7 @@ var $helpers=array("Html","Form");
                     $email2->transport();
                     $email2->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                         ->template('registration')
-                        ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user->email_address,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
+                        ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
                         ->emailformat('html')
                         ->to([$user_email])
                         ->subject('Welcome to Eating Disorders Victoria')
@@ -718,12 +718,12 @@ var $helpers=array("Html","Form");
                         $email->transport();
                         $email->from(['reception@eatingdisorders.org.au' => 'EDV Website'])
                             ->to('reception@eatingdisorders.org.au')
-                            ->subject('New Registered User')
-                            ->message('A new user has been registered to EDV.
-                                    Name: ' . $user->given_name . ' ' . $user->family_name . '
-                                    User ID: ' . $user->id . '
-                                    Email: ' . $user->email_address . '')
+                            ->template('registration_reception')
+                            ->viewVars(['fname'=> $user->given_name, 'lname'=>$user->family_name, 'email'=>$user_email,'memID'=>$memberships->id,'exDate'=>$memberships->expiry_date])
+                            ->emailformat('html')
+                            ->subject('A New Member has registered')
                             ->send();
+
                     if ($user->newsletter) {
                         //Authenticate via API key for 'Test List'
                         $apiTable = TableRegistry::get('ApiKeys');

@@ -3,13 +3,13 @@
 <body>
 
 
-Dear <?php echo $fname . ' ' . $lname ?>,<br><br>
+Dear <?= $fname.' '.$lname ?>,<br><br>
 
 Thank you for becoming a member of Eating Disorders Victoria and welcome to our growing ranks of supporters.<br><br>
 
-Your username is <b><?= h($email) ?></b><br>
-Your membership number is <b><?= h($memID) ?></b><br>
-Your membership is valid until <b><?= h($exDate) ?></b><br><br>
+Your username is <b><?= $email ?></b><br>
+Your membership number is <b><?= $memID ?></b><br>
+Your membership is valid until <b><?= $exDate ?></b><br><br>
 
 By becoming a member you are helping us to provide vital support, information and advocacy state-wide for all people affected directly or indirectly by eating disorders.<br><br>
 
