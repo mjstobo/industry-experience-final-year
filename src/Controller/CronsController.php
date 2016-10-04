@@ -50,7 +50,7 @@ class CronsController extends AppController
 
                 $email->transport();
 
-                $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
+                $email->from(['reception@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                     ->to([$user->user['email_address'] => $user->user['given_name']])
                    // ->to(['ie.expo.team14@gmail.com'])
                     ->template('membershipExpired')

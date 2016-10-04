@@ -823,7 +823,6 @@ class UsersController extends AppController
                         $email->transport();
                         $email->from(['no-reply@eatingdisorders.org.au' => 'Eating Disorders Victoria'])
                             ->to($user[0]->email_address)
-                            //->to('ie.expo.team14@gmail.com')
                             ->subject('EDV Membership Renewal')
                             ->message('Dear ' . $user->salutation->salutation_name . ' ' . $user->given_name . ' ' . $user->family_name . ',' . "\n" . "\n" . "\n" .
                                 'Your Membership has been renewed for ' . $query->duration->duration_name . '.' . "\n" . "\n"

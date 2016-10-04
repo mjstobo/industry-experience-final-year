@@ -6,7 +6,7 @@ Dear <?php echo $fname . ' ' . $lname ?>,<br><br>
 
 Our records show that your membership of Eating Disorders Victoria (EDV) expired on <?php echo $date ?>.<br><br>
 
-You can now easily renew your membership online - just click here <link>.
+You can now easily renew your membership online - just login <a href="http://members.eatingdisorders.org.au/">here</a>.
 
 Membership to EDV provides you with:<br>
 <ul>
@@ -35,7 +35,7 @@ Your membership also goes a long way to helping us to:
 Yours sincerely,<br>
 Jennifer Beveridge<br><br>
 
-Renew Now <link>
+<a href="http://members.eatingdisorders.org.au/">Renew Now<a>
 
 
 
