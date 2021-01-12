@@ -1,24 +1,17 @@
-# CakePHP Application Skeleton
+# Industry Experience - CakePHP Library & User Management Application - Final year project for B.ITS degree for local NFP   
 
-[![Build Status](https://api.travis-ci.org/cakephp/app.png)](https://travis-ci.org/cakephp/app)
-[![License](https://poser.pugx.org/cakephp/app/license.svg)](https://packagist.org/packages/cakephp/app)
+Project was developed in CakePHP 3.0 for Eating Disorders Victoria collarobatively with Housam Shehata and Todd Ladner. 
 
-A skeleton for creating applications with [CakePHP](http://cakephp.org) 3.0.
+Application includes:
 
-## Installation
-
-1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
-
-If Composer is installed globally, run
-```bash
-composer create-project --prefer-dist cakephp/app [app_name]
-```
-
-You should now be able to visit the path to where you installed the app and see
-the setup traffic lights.
-
-## Configuration
-
-Read and edit `config/app.php` and setup the 'Datasources' and any other
-configuration relevant for your application.
+- Library Management including:
+    - CRUD for Authors, Books and Magazines
+    - Borrowing System with email notifications / scheduled tasks for overdue / expired loans
+    - Listing & Detail pages for all users and loan histories
+    - Catalogue Management
+    
+- User Management system including:
+  - CRUD / User Management for Staff and Library Members
+  - Membership fee management system and PayPal Integration
+  - Campaign Monitor integration for EDM lists
+  - Administrator Dashboard
