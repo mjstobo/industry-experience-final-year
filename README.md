@@ -15,3 +15,5 @@ Application includes:
   - Membership fee management system and PayPal Integration
   - Campaign Monitor integration for EDM lists
   - Administrator Dashboard
+
+## Project is no longer online (removed by client)
