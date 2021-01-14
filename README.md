@@ -1,6 +1,6 @@
 # Industry Experience - CakePHP Library & User Management Application - Final year project for B.ITS degree for local NFP   
 
-Project was developed in CakePHP 3.0 for Eating Disorders Victoria collarobatively with Housam Shehata and Todd Ladner. 
+Project was developed in CakePHP 3.0 for Eating Disorders Victoria collarobatively with Housam Shehata and Todd Ladner. This was the final year 'Industry Experience' project for the Monash B.ITS (Software Development) course.
 
 Application includes:
 
